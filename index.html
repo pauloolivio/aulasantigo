@@ -12,14 +12,15 @@
 
 </head>
 
-<body>
+<body class="">
     <header class="container text-center">
         <h1 class="header__headline ">Aula 8 - Formulário para Transmissão por Correia</h1>
         <h5 class="fw-semibold">Disciplina - Elementos de Máquina</h1>
             <p class="fw-semibold ">Professor Dr. Eng. Paulo Sergio Olivio Filho</p>
-
     </header>
     <hr>
+
+    <!--Paulo Sergio Olivio Filho-->
     <form class="container">
         <div>
             <legend class="fs-6 bg-secondary text-light rounded p-2"> Potência Projetada = Potência do Motor * Fator de Serviço </legend>
@@ -39,10 +40,8 @@
         </div>
         <input type="button" class="btn btn-primary" value="Calcular" onclick="calcPot()">
         <input type="reset" class="btn btn-secondary" value="Reset">
-    </form>
 
-    <hr>
-    <form class="container ">
+        <hr>
         <div>
             <legend class="fs-6 bg-secondary text-light rounded p-2 "> Relação de Transmissão (D) = Diâmetro Polia Maior / Diâmetro Polia Menor </legend>
             <div class="mb-3 ">
@@ -62,10 +61,7 @@
             <input type="button" class="btn btn-primary" value="Calcular" onclick="calcRel()">
             <input type="reset" class="btn btn-secondary" value="Reset">
         </div>
-    </form>
-
-    <hr>
-    <form class="container">
+        <hr>
         <div>
             <legend class="fs-6 bg-secondary text-light rounded p-2"> Relação de Transmissão (n) = Rotação Menor / Rotação Maior </legend>
             <div class="mb-3">
@@ -87,10 +83,8 @@
                 <input type="reset" class="btn btn-secondary" value="Reset">
             </div>
         </div>
-    </form>
-    <hr>
+        <hr>
 
-    <form class="container">
         <div>
             <legend class="fs-6 bg-secondary text-light rounded p-2"> Distância entre centros (C) = (3 * Diâmetro Polia Menor + Diâmetro Polia Maior) / 2 </legend>
             <div class="mb-3">
@@ -112,12 +106,11 @@
                 <input type="reset" class="btn btn-secondary" value="Reset">
             </div>
         </div>
-    </form>
-    <hr>
 
-    <form class="container">
+        <!--Paulo Sergio Olivio Filho-->
+        <hr>
         <div>
-            <legend class="fs-6 bg-secondary text-light rounded p-2"> Comprimento da Correia = ((2 * distancia entre centros) + (1.57 * (Diâmetro da Polia Maior + Diâmetro da Polia Menor)) + ((Diâmetro da Polia Maior - Diâmetro da Polia Menor) ** 2 / (4 * distancia entre centros))); </legend>
+            <legend class="fs-6 bg-secondary text-light rounded p-2"> Comprimento da Correia = ((2 * distancia entre centros) + (1.57 * (Diâmetro da Polia Maior + Diâmetro da Polia Menor)) + ((Diâmetro da Polia Maior - Diâmetro da Polia Menor) ** 2 / (4 * distancia entre centros)))</legend>
             <div class="mb-3">
                 <div class="mb-3 ">
                     <label for="dMaior2">Diâmetro Polia Maior [mm] :</label>
@@ -141,12 +134,10 @@
                 <input type="reset" class="btn btn-secondary" value="Reset">
             </div>
         </div>
-    </form>
-    <hr>
 
-    <form class="container">
+        <hr>
         <div>
-            <legend class="fs-6 bg-secondary text-light rounded p-2"> Comprimento Ajustado da Correia = Comprimento da Correia Padrão - (1.57 * (Diâmetro da Polia Maior + Diâmetro da Polia Menor)); </legend>
+            <legend class="fs-6 bg-secondary text-light rounded p-2"> Comprimento Ajustado da Correia = Comprimento da Correia Padrão - (1.57 * (Diâmetro da Polia Maior + Diâmetro da Polia Menor)) </legend>
             <div class="mb-3">
                 <div class="mb-3 ">
                     <label for="dMaior3">Diâmetro Polia Maior [mm] :</label>
@@ -170,13 +161,10 @@
                 <input type="reset" class="btn btn-secondary" value="Reset">
             </div>
         </div>
-    </form>
-    <hr>
+        <hr>
 
-    <!-- Corrigir a partir daqui-->
-    <form class="container">
         <div>
-            <legend class="fs-6 bg-secondary text-light rounded p-2"> Distancia entre Centros Ajustada = ; </legend>
+            <legend class="fs-6 bg-secondary text-light rounded p-2"> Distancia entre Centros Ajustada = (Comprimento Correia Ajustada - Fator de correção * (Diâmetro Polia Maior - Diâmetro Polia Menor))/2</legend>
             <div class="mb-3">
                 <div class="mb-3 ">
                     <label for="dMaior4">Diâmetro Polia Maior [mm] :</label>
@@ -200,36 +188,34 @@
                 </div>
             </div>
             <div>
-                <input type="button" class="btn btn-primary" value="Calcular" onclick="calcCompCorreia()">
+                <input type="button" class="btn btn-primary" value="Calcular" onclick="calcDistanciaCentrosAj()">
                 <input type="reset" class="btn btn-secondary" value="Reset">
             </div>
         </div>
-    </form>
-    <hr>
+        <hr>
 
-    <form class="container">
         <div>
-            <legend class="fs-6 bg-secondary text-light rounded p-2"> Capacidade de Transmissão por Correia [cv] = ; </legend>
+            <legend class="fs-6 bg-secondary text-light rounded p-2"> Capacidade de Transmissão por Correia [cv] = (Potência Básica + Potência Adicional) * Fator de Correção de Comprimento * Fator de Correção do Arco</legend>
             <div class="mb-3">
                 <div class="mb-3 ">
-                    <label for="dMaior4">Diâmetro Polia Maior [mm] :</label>
-                    <input class="text-center" type="text" id="dMaior4" name="dMaior4">
+                    <label for="pBasico">Potência Básica (Tabelado) [cv]:</label>
+                    <input class="text-center" type="text" id="pBasico" name="pBasico">
                 </div>
                 <div class="mb-3">
-                    <label for="dMenor4">Diâmetro Polia Menor [mm]:</label>
-                    <input class="text-center" type="text" id="dMenor4" name="dMenor4">
+                    <label for="pAdicional">Potência Adicional (Tabelado) [cv]:</label>
+                    <input class="text-center" type="text" id="pAdicional" name="pAdicional">
                 </div>
                 <div class="mb-3">
-                    <label for="cCorreiaAjust">Comprimento Correia Ajustada [mm]:</label>
-                    <input class="text-center" type="text" id="cCorreiaAjust" name="cCorreiaAjust">
+                    <label for="fatorComprimento">Fator de Correção de Comprimento (Tabelado):</label>
+                    <input class="text-center" type="text" id="fatorComprimento" name="fatorComprimento">
                 </div>
                 <div class="mb-3">
-                    <label for="fatorH">Fator de correção (h):</label>
-                    <input class="text-center" type="text" id="fatorH" name="fatorH">
+                    <label for="fatorCorrecaoArco">Fator de Correção do Arco (Tabelado):</label>
+                    <input class="text-center" type="text" id="fatorCorrecaoArco" name="fatorCorrecaoArco">
                 </div>
                 <div class="mb-3">
-                    <label type="text" for="capPorCorreia">Capacidade Transmissão por Correia [cv]:</label>
-                    <label><output type="text " id="capPorCorreia" class="output text-center"  name="capPorCorreia"></output></label>
+                    <label type="text" for="capTransmissao">Capacidade Transmissão por Correia [cv]:</label>
+                    <label><output type="text " id="capTransmissao" class="output text-center"  name="capTransmissao"></output></label>
                 </div>
             </div>
             <div>
@@ -237,35 +223,76 @@
                 <input type="reset" class="btn btn-secondary" value="Reset">
             </div>
         </div>
-    </form>
-    <hr>
-
-    <form class="container">
+        <hr>
         <div>
-            <legend class="fs-6 bg-secondary text-light rounded p-2">Número Miínimo de Correias = ; </legend>
+            <legend class="fs-6 bg-secondary text-light rounded p-2">Número Miínimo de Correias = Potência Projetada / Capacidade de Transmissão por Correia</legend>
             <div class="mb-3">
                 <div class="mb-3 ">
-                    <label for="dMaior4">Diâmetro Polia Maior [mm] :</label>
-                    <input class="text-center" type="text" id="dMaior4" name="dMaior4">
+                    <label for="pProjetada">Potência Projetada [cv]: </label>
+                    <input class="text-center" type="text" id="pProjetada" name="pProjetada">
                 </div>
                 <div class="mb-3">
-                    <label for="dMenor4">Diâmetro Polia Menor [mm]:</label>
-                    <input class="text-center" type="text" id="dMenor4" name="dMenor4">
+                    <label for="capTransmissaoCorreia">Capacidade de Transmissão por Correia [cv]:</label>
+                    <input class="text-center" type="text" id="capTransmissaoCorreia" name="capTransmissaoCorreia">
                 </div>
                 <div class="mb-3">
-                    <label type="text" for="nMinimoCorreias">Número Mínimo de Correias [und]:</label>
-                    <label><output type="text " id="nMinimoCorreias" class="output text-center"  name="nMinimoCorreias"></output></label>
+                    <label type="text" for="nCorreias">Número Mínimo de Correias [und]:</label>
+                    <label><output type="text " id="nCorreias" class="output text-center"  name="nCorreias"></output></label>
                 </div>
             </div>
             <div>
-                <input type="button" class="btn btn-primary" value="Calcular" onclick="calcCompCorreia()">
+                <input type="button" class="btn btn-primary" value="Calcular" onclick="calcNumeroCorreias()">
+                <input type="reset" class="btn btn-secondary" value="Reset">
+            </div>
+        </div>
+        <hr>
+        <div>
+            <legend class="fs-6 bg-secondary text-light rounded p-2">Momento Torçor = (30 * Potência do Motor) / math.pi * Rotação da Polia Motora</legend>
+            <div class="mb-3">
+                <div class="mb-3 ">
+                    <label for="potMotor1">Potência Motor [W]: </label>
+                    <input class="text-center" type="text" id="potMotor1" name="potMotor1">
+                </div>
+                <div class="mb-3">
+                    <label for="nPoliaMotora">Rotação da Polia Motora [rpm]:</label>
+                    <input class="text-center" type="text" id="nPoliaMotora" name="nPoliaMotora">
+                </div>
+                <div class="mb-3">
+                    <label type="text" for="mTorque">Momento Torçor [N*m]:</label>
+                    <label><output type="text" id="mTorque" class="output text-center"  name="mTorque"></output></label>
+                </div>
+            </div>
+            <div>
+                <input type="button" class="btn btn-primary" value="Calcular" onclick="calcMomentoTorçor()">
+                <input type="reset" class="btn btn-secondary" value="Reset">
+            </div>
+        </div>
+
+        <hr>
+        <div>
+            <legend class="fs-6 bg-secondary text-light rounded p-2">Força Tangencial = 2 * Momento Torçor / Diâmetro da Polia Motora * 10^-3</legend>
+            <div class="mb-3">
+                <div class="mb-3 ">
+                    <label for="mTorque1">Momento Torçor [N*m]: </label>
+                    <input class="text-center" type="text" id="mTorque1" name="mTorque1">
+                </div>
+                <div class="mb-3">
+                    <label for="dPoliaMotora">Diâmetro da Polia Motora [mm]:</label>
+                    <input class="text-center" type="text" id="dPoliaMotora" name="dPoliaMotora">
+                </div>
+                <div class="mb-3">
+                    <label type="text" for="fTangencial">Força Tangencial [N]:</label>
+                    <label><output type="text " id="fTangencial" class="output text-center"  name="fTangencial"></output></label>
+                </div>
+            </div>
+            <div>
+                <input type="button" class="btn btn-primary" value="Calcular" onclick="calcforçatangencial()">
                 <input type="reset" class="btn btn-secondary" value="Reset">
             </div>
         </div>
     </form>
     <hr>
-
-
+    <!--Paulo Sergio Olivio Filho-->
     <footer>
         <div class="container text-center bg-secondary text-light rounded p-3 mb-2 ">
             <h2 class="direitos-texto ">Dr. Eng. Paulo Sergio Olivio Filho</h1>
@@ -275,100 +302,3 @@
 </body>
 
 </html>
-<!-- 
-</html>
-
-
-
-        P<sub>b</sub>: <label id="pb "></label> kW<br> P
-        <sub>a</sub>: <label id="pa "></label> kW<br> F
-        <sub>cc</sub>: <label id="fcc "></label><br> F
-        <sub>cac</sub>: <label id="fcac "></label><br> P
-        <sub>pc</sub>: <label id="ppc "></label> kW<br>
-<!DOCTYPE html>
-
-<html>
-
-<head>
-    <title>Cálculo de Transmissão por Correia</title>
-</head>
-
-<body>
-
-    <h1>Cálculo de Transmissão por Correia</h1>
-
-    <p>
-        N<sub>menor</sub>: <input type="number " id="nmenor "> RPM<br> d: <input type="number " id="d "> mm<br> D: <input type="number " id="D "> mm<br> Pm: <input type="number " id="Pm "> kW<br> fs: <input type="number " id="fs ">
-    </p>
-
-    <button onclick="calcular() ">Calcular</button>
-
-    <p>
-        P<sub>b</sub>: <label id="pb "></label> kW<br> P
-        <sub>a</sub>: <label id="pa "></label> kW<br> F
-        <sub>cc</sub>: <label id="fcc "></label><br> F
-        <sub>cac</sub>: <label id="fcac "></label><br> P
-        <sub>pc</sub>: <label id="ppc "></label> kW<br>
-    </p>
-
-    <script>
-        var potenciaMotor = 1;
-        var fatorServico = 1.5;
-
-        // função para calcular a transmissão por correia
-        function calcular() {
-            var nmenor = parseFloat(document.getElementById("nmenor ").value);
-            var d = parseFloat(document.getElementById("d ").value);
-            var D = parseFloat(document.getElementById("D ").value);
-            var Pm = parseFloat(document.getElementById("Pm ").value);
-            var fs = parseFloat(document.getElementById("fs ").value);
-
-            // Potência Projetada
-            var potenciaProjetada = potenciaMotor * fatorServico;
-
-            // Relação de transmissão
-            var relacaoTransmissao = D / d;
-
-            // Rotação da polia maior
-            var nmaior = nmenor / relacaoTransmissao;
-
-            // função para cálculo da distância entre centros
-            var C = (3 * d + D) / 2;
-
-            // comprimento inicial da correia
-            var lc = 2 * C + 1.57 * (D + d) + ((D - d) ** 2) / 4 * C;
-
-            // comprimento ajustado
-            var la = lc - 1.57 * (D + d);
-
-            // distância entre centros ajustada
-            var h = 1.25 * (la / 1000) ** (2 / 3) * (D + d) / 1000;
-
-            var Ca = la - (h * (D - d)) / 2;
-
-            // Capacidade de transmissão por correia
-            var pb = (potenciaProjetada * 1000) / (nmenor / 60);
-            var pa = pb * fs;
-            var fcc = 1.2;
-            var fcac = 1;
-
-            var Ppc = (pb + pa) * fcc * fcac;
-
-            // exibe os resultados
-            document.getElementById("pb ").innerHTML = pb.toFixed(2);
-            document.getElementById("pa ").innerHTML = pa.toFixed(2);
-            document.getElementById("fcc ").innerHTML = fcc.toFixed(2);
-            document.getElementById("fcac ").innerHTML = fcac.toFixed(2);
-            document.getElementById("ppc ").innerHTML = Ppc.toFixed(2);
-    </script>
-</body>
-
-</html> -->
-
-</html> -->
-
-</html> -->
-
-</html> -->
-
-</html> -->

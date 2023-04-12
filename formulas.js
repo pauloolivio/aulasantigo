@@ -48,29 +48,48 @@ function calcCompCorreiaAjust() {
     document.getElementById("cCorreiaAJ").innerHTML = result.toFixed(3);
 }
 
-//fazer
 //Distancia Entre Centros Ajustada
-function calcDistanciaCentros() {
-    var dMaior1 = parseFloat(document.getElementById("dMaior1").value);
-    var dMenor1 = parseFloat(document.getElementById("dMenor1").value);
-    var result = ((3 * dMenor1) + dMaior1) / 2;
-    document.getElementById("dCentros").innerHTML = result.toFixed(3);
+function calcDistanciaCentrosAj() {
+    var dMaior4 = parseFloat(document.getElementById("dMaior4").value);
+    var dMenor4 = parseFloat(document.getElementById("dMenor4").value);
+    var cCorreiaAj = parseFloat(document.getElementById("cCorreiaAjust").value);
+    var fatorH = parseFloat(document.getElementById("fatorH").value);
+    var result = (cCorreiaAj - (fatorH * (dMaior4 - dMenor4))) / 2;
+    document.getElementById("dCentroAJ").innerHTML = result.toFixed(3);
 }
 
 //fazer
 //Capacidade de Transmissão por Correia
-function calcDistanciaCentros() {
-    var dMaior1 = parseFloat(document.getElementById("dMaior1").value);
-    var dMenor1 = parseFloat(document.getElementById("dMenor1").value);
-    var result = ((3 * dMenor1) + dMaior1) / 2;
-    document.getElementById("dCentros").innerHTML = result.toFixed(3);
+function calcCapTransmPorCorreia() {
+    var pBasico = parseFloat(document.getElementById("pBasico").value);
+    var pAdicional = parseFloat(document.getElementById("pAdicional").value);
+    var fComp = parseFloat(document.getElementById("fatorComprimento").value);
+    var fcArco = parseFloat(document.getElementById("fatorCorrecaoArco").value);
+    var result = (pBasico + pAdicional) * fComp * fcArco;
+    document.getElementById("capTransmissao").innerHTML = result.toFixed(3);
 }
 
-//fazer
 //Número mínimo de correias
-function calcDistanciaCentros() {
-    var dMaior1 = parseFloat(document.getElementById("dMaior1").value);
-    var dMenor1 = parseFloat(document.getElementById("dMenor1").value);
-    var result = ((3 * dMenor1) + dMaior1) / 2;
-    document.getElementById("dCentros").innerHTML = result.toFixed(3);
+function calcNumeroCorreias() {
+    var potProjetada = parseFloat(document.getElementById("pProjetada").value);
+    var capTransmissaoCorreia = parseFloat(document.getElementById("capTransmissaoCorreia").value);
+    var result = potProjetada / capTransmissaoCorreia
+    document.getElementById("nCorreias").innerHTML = result.toFixed(3);
+}
+
+//Momento Torçor
+function calcMomentoTorçor() {
+    var potMotor = parseFloat(document.getElementById("potMotor1").value);
+    var rotacaoPolia = parseFloat(document.getElementById("nPoliaMotora").value);
+    var result = (30 * potMotor) / (Math.PI * rotacaoPolia);
+    document.getElementById("mTorque").innerHTML = result.toFixed(3);
+}
+
+
+//Força Tangencial
+function calcforçatangencial() {
+    var momentoTorçor = parseFloat(document.getElementById("mTorque1").value);
+    var diametroPolia = parseFloat(document.getElementById("dPoliaMotora").value);
+    var result = (2 * momentoTorçor) / (diametroPolia * 10 ** -3);
+    document.getElementById("fTangencial").innerHTML = result.toFixed(3);
 }
