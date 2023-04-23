@@ -1,0 +1,7 @@
+.output {
+    width: 180px;
+    margin-left: 5px;
+    border: 1px solid black;
+    height: 25px;
+    background-color: yellow;
+}

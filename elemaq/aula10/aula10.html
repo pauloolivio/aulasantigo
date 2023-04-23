@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+
+
+<!-- Mirrored from webstructural.com/beam-calculator.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 18 Apr 2023 17:39:00 GMT -->
+
+<head>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D38FS1SK80"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-D38FS1SK80');
+    </script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free Beam Calculator">
+    <meta name="author" content="WebStructural, LLC">
+    <title>Calculadora de Momento fletor e força Cortante</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Bootstrap Core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="morrisjs/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <style>
+        div.card {
+            /*width: 210px;*/
+            /*box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);*/
+            box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.10);
+            text-align: center;
+        }
+        
+        .beam-selector .panel:hover {
+            cursor: pointer;
+            background: #FFFAE3;
+            -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.10);
+            -moz-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.10);
+            box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.10);
+        }
+        
+        .beam-selector .selected {
+            background: #FFFAE3;
+            -webkit-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.10);
+            -moz-box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.10);
+            box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.10);
+        }
+    </style>
+</head>
+
+<title>Calculadora de Momento fletor e força Cortante</title>
+
+<body onload="setup();" class="bg-ligth">
+    <header class="container text-center">
+        <h1 class="header__headline ">Aula 10 - Formulário para Diagrama de Eixos</h1>
+        <h4 class="fw-semibold">Disciplina - Elementos de Máquina</h4>
+        <p class="fw-semibold ">Professor Dr. Eng. Paulo Sergio Olivio Filho</p>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="card panel panel-default">
+                <div class="panel-heading text-left">
+                    <h4>Selecione o Tipo de Barra</h4>
+                </div>
+                <div class="panel-body">
+                    <div id="beam-selector" class="row beam-selector">
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6">
+                            <div id="beam-2" class="panel panel-default" onclick="javascript:OnBeamSelected(2);">
+                                <div class="panel-body text-center">
+                                    <img src="beam-calculator/images/simple-3.png" alt="Simply Supported Beam 1" width="110px" height="70px">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6">
+                            <div id="beam-10" class="panel panel-default" onclick="javascript:OnBeamSelected(09);">
+                                <div class="panel-body text-center">
+                                    <img src="beam-calculator/images/cantilever-1.png" alt="Simply Supported Beam 1" width="110px" height="70px">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-3 col-sm-6 col-xs-6">
+                            <div id="beam-11" class="panel panel-default">
+                                <div class="panel-body text-center" onclick="javascript:OnBeamSelected(10);">
+                                    <img src="beam-calculator/images/cantilever-2.png" alt="Simply Supported Beam 1" width="110px" height="70px">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Beam Drawing and Input Area -->
+    <div class="container" style="max-width:1000px;">
+        <div class="row">
+            <div class="card panel panel-default" id="beam-drawing-top">
+                <div class="panel-heading text-left">
+                    <h4>Altere as Dimensões da Barra</h4>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <div id="current-beam-image" class="text-center">
+                                        <img src="beam-calculator/images/cantilever-8.png" alt="Simply Supported Beam 1" width="160px">
+                                    </div>
+                                    <br>
+                                    <p class="text-center">
+                                        <div class="btn-group dropdown">
+                                            <button class="btn btn-default dropdown-toggle" type="button" id="units-dropdown" data-toggle="dropdown" aria-expanded="true">
+                          Sistema Inglês (inches, kips, ksi)
+                          <span class="caret"></span>
+                        </button>
+                                            <ul class="dropdown-menu" role="menu" style="cursor: pointer;" aria-labelledby="units-dropdown">
+                                                <li role="presentation"><a role="menuitem" tabindex="-1" onClick="setEnglishUnits();">Sistema Inglês (inches, kips, ksi)</a></li>
+                                                <li role="presentation"><a role="menuitem" tabindex="-1" onClick="setMetricUnits();">Sistema Métrico (meters, kN, kPa)</a></li>
+                                            </ul>
+                                            <br>
+                                        </div>
+                                    </p>
+                                    <label for="E-input" class="grey-text">Modulo de Young, <i>E (<span
+                          class="units-pressure"></span>)</i></label>
+                                    <input type="text" id="E-input" class="form-control" value="29000" onchange="recalculate();">
+                                    <label for="I-input" class="grey-text">Momento de Inrcia, <i>I (<span
+                          class='units-length'></span><sup>4</sup>)</i></label>
+                                    <div class="input-group">
+                                        <input type="text" id="I-input" class="form-control" value="10" onchange="recalculate();">
+                                        <span class="input-group-btn noprint">
+                        <button id="shape-selector-button" class="btn btn-primary" type="button" data-toggle="modal"
+                          data-target="#shapeSelectorModal">
+                          <i class="fa fa-search"></i> Tabela de Perfis de Barra
+                        </button>
+                      </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-body text-center">
+                                    <div id="current-beam-equations"><img src="beam-calculator/images/simple_1_eqns.png" alt="simple 1 equations"></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="panel panel-default">
+                                <div class="panel-body text-center">
+                                    <div id="dimensions">
+                                        <label class="grey-text" for="q-input"><i>q (<span
+                            class="units-force-per-length">kips/in</span>)</i></label>
+                                        <input class="form-control" type="text" id="q-input" value="1" onchange="recalculate();">
+                                        <label class="grey-text" for="L-input"><i>L (<span class="units-length">in</span>)</i></label>
+                                        <input class="form-control" type="text" id="L-input" value="120" onchange="recalculate();">
+                                        <label class="grey-text" for="x-input"><i>point of interest, x (<span
+                            class="units-length">in</span>)</i></label>
+                                        <input class="form-control" type="text" id="x-input" value="60" onchange="recalculate();">
+                                    </div>
+                                    <div id="calculate-button" class="noprint">
+                                        <p class="btn btn-success btn-md" onclick="onCalculateButtonTap(0)" role="button">Calculate</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Modal shape selector -->
+                        <div class="modal fade" id="shapeSelectorModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog shapes-selector-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="myModalLabel">Selecione o Perfil Desejado</h4>
+                                    </div>
+                                    <div class="modal-body shapes-selector-body">
+                                        <div class="bs-component">
+                                            <ul class="nav nav-tabs">
+                                                <li class="active"><a href="#w-shapes" data-toggle="tab" onclick="getShapes('AISC/W-shapes.json')">W</a></li>
+                                                <li class=""><a href="#c-shapes" data-toggle="tab" onclick="getShapes('AISC/C-shapes.json')">C</a>
+                                                </li>
+                                                <li class=""><a href="#t-shapes" data-toggle="tab" onclick="getShapes('AISC/WT-shapes.json')">T</a>
+                                                </li>
+                                                <li class=""><a href="#l-shapes" data-toggle="tab" onclick="getShapes('AISC/L-shapes.json')">L</a>
+                                                </li>
+                                                <li class=""><a href="#hss-shapes" data-toggle="tab" onclick="getShapes('AISC/HSS-Square-shapes.json')">HSS</a></li>
+                                                <li class=""><a href="#lumber-shapes" data-toggle="tab" onclick="getShapes('Wood/Lumber.json')">Lumber</a></li>
+                                            </ul>
+                                            <!--<div class="form-group">
+<label class="control-label" for="I-input">Moment of Inertia, <i>I (<span class="units-length"></span><sup>4</sup>)</i></label>
+<input class="form-control" type="text" id="I-input" value="10">
+</div>-->
+                                            <br>
+                                            <div id="myTabContent" class="tab-content">
+                                                <div class="tab-pane fade active in" id="w-shapes">
+                                                    <div class="btn-group" role="group" aria-label="...">
+                                                        <button type="button" class="btn btn-default" onclick="getShapes('AISC/W-shapes.json')">W</button>
+                                                        <button type="button" class="btn btn-default" onclick="getShapes('AISC/M-shapes.json')">M</button>
+                                                        <button type="button" class="btn btn-default" onclick="getShapes('AISC/S-shapes.json')">S</button>
+                                                        <button type="button" class="btn btn-default" onclick="getShapes('AISC/HP-shapes.json')">HP</button>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="c-shapes">
+                                                    <div class="btn-group" role="group" aria-label="...">
+                                                        <button type="button" class="btn btn-default" onclick="getShapes('AISC/C-shapes.json')">C</button>
+                                                        <button type="button" class="btn btn-default" onclick="getShapes('AISC/MC-shapes.json')">MC</button>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="t-shapes">
+                                                    <div class="btn-group" role="group" aria-label="...">
+                                                        <button type="button" class="btn btn-default" onclick="getShapes('AISC/WT-shapes.json')">WT</button>
+                                                        <button type="button" class="btn btn-default" onclick="getShapes('AISC/MT-shapes.json')">MT</button>
+                                                        <button type="button" class="btn btn-default" onclick="getShapes('AISC/ST-shapes.json')">ST</button>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="l-shapes">
+                                                </div>
+                                                <div class="tab-pane fade" id="hss-shapes">
+                                                    <div class="btn-group" role="group" aria-label="...">
+                                                        <button type="button" class="btn btn-default" onclick="getShapes('AISC/HSS-Square-shapes.json')">HSS Square</button>
+                                                        <button type="button" class="btn btn-default" onclick="getShapes('AISC/HSS-Rectangle-shapes.json')">HSS Rectangle</button>
+                                                        <button type="button" class="btn btn-default" onclick="getShapes('AISC/HSS-Round-shapes.json')">HSS Round</button>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="lumber-shapes">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="panel panel-default">
+                                            <!-- Default panel contents -->
+                                            <!--<div class="panel-heading">Panel heading</div>-->
+                                            <div class="panel-body">
+                                                <!-- Table -->
+                                                <div id="shape-table"></div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end container -->
+
+    <!-- Plots -->
+    <div class="container" style="max-width:1000px;">
+        <div class="row">
+            <div class="card panel panel-default" id="beam-plots-top">
+                <div class="panel-heading text-left">
+                    <h4>Resultados Gráficos</h4>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="panel panel-default">
+                                <div class="panel-body  text-left">
+                                    <h6>Deslocamento <i>(<span class="units-length"></span>)</i></h6>
+                                    <div id="displacement-chart" style="height:150px; width: 380px;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="panel panel-default">
+                                <div class="panel-body text-left">
+                                    <h6>Momento Fletor <i>(<span class="units-moment"></span>)</i></h6>
+                                    <div id="moment-chart" style="height:150px; width: 380px;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="panel panel-default">
+                                <div class="panel-body text-left">
+                                    <h6>Inclinação <i>(graus)</i></h6>
+                                    <div id="theta-chart" style="height:150px; width: 380px;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="panel panel-default">
+                                <div class="panel-body text-left">
+                                    <h6>Força Cortante <i>(<span class="units-force"></span>)</i></h6>
+                                    <div id="shear-chart" class="text-center" style="height:150px; width: 380px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="container" style="max-width:1000px;">
+        <div class="row">
+            <div class="card panel panel-default">
+                <div class="panel-heading text-left">Extremos</div>
+                <div class="panel-body">
+                    <table class='table'>
+                        <tr>
+                            <th>Max. Deslocamento</th>
+                            <td><span id="max-displacement"></span> <span class='units-length'></span></td>
+                            <td>@</td>
+                            <td><span id="max-displacement-location"></span> <span class='units-length'></span></td>
+                        </tr>
+                        <tr>
+                            <th>Max. Força Cortante</th>
+                            <td><span id="max-shear"></span> <span class='units-force'></span></td>
+                            <td>@</td>
+                            <td><span id="max-shear-location"></span> <span class='units-length'></span></td>
+                        </tr>
+                        <tr>
+                            <th>Max. Momento Fletor</th>
+                            <td><span id="max-moment"></span> <span class='units-moment'></span></td>
+                            <td>@</td>
+                            <td><span id="max-moment-location"></span> <span class='units-length'></span></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container" style="max-width:1000px;">
+        <div class="row">
+            <div class="card panel panel-default">
+                <div class="panel-heading text-left">Resultados Pontuais</div>
+                <div class="panel-body">
+                    <div id="result-table"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="jquery/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="js/jquery.flot.min.9927ea93540a2a08.js"></script>
+
+    <script src="../cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax87f9.js?config=AM_HTMLorMML-full"></script>
+
+    <script src="beam-calculator/js/beam-calculator.73fba3aef677ff1f.js"></script>
+    <script src="beam-calculator/js/shape-selector.e05c0760b87a525e.js"></script>
+
+</body>
+
+</html>
+
+</html>
