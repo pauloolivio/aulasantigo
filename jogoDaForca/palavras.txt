@@ -1,0 +1,94 @@
+ palavras = [
+        palavra001 = {
+            nome: "RISCO OU PERIGO",
+            categoria: "FUNDAMENTOS BÁSICOS",
+            explicacao: "Risco é a probabilidade ou chance de lesão  ou morte. <br> Perigo é uma condição ou um conjunto de circunstâncias que têm o potencial de causar ou contribuir para uma lesão ou morte"
+        },
+        palavra002 = {
+            nome: "ATO INSEGURO",
+            categoria: "FUNDAMENTOS BÁSICOS",
+            explicacao: "É quando a pessoa se expõe ao perigo,  pode se de forma consciente, inconsciente ou  circunstancial"
+        },
+        palavra003 = {
+            nome: "CONDIÇÃO INSEGURA",
+            categoria: "FUNDAMENTOS BÁSICOS",
+            explicacao: "É o ambiente físico de trabalho  que expõe a perigo ou risco a integridade física do  trabalhador e a própria segurança das instalações e  equipamentos"
+        },
+        palavra004 = {
+            nome: "QUASE ACIDENTES",
+            categoria: "FUNDAMENTOS BÁSICOS",
+            explicacao: "São  ocorrências que apresentam características e potencial para causar algum dano, mas que não  chegam a fazê-lo, de forma a não deixarem marcas como os acidentes"
+        },
+        palavra005 = {
+            nome: "ERGONOMIA FÍSICA",
+            categoria: "NR17",
+            explicacao: "Ocupa-se das características da anatomia humana, antropometria, fisiologia e biomecânica, relacionados com a atividade física."
+        },
+        palavra006 = {
+            nome: "ERGONOMIA COGNITIVA",
+            categoria: "NR17",
+            explicacao: "Ocupa-se dos processos mentais, como a percepção, memória, raciocínio e resposta motora, relacionados com as interações entre as pessoas e outros elementos de um sistema."
+        },
+        palavra007 = {
+            nome: "ERGONOMIA ORGANIZACIONAL",
+            categoria: "NR17",
+            explicacao: "Ocupa-se da otimização dos sistemas sócio-técnicos, abrangendo as estruturas organizacionais, políticas e processos."
+        },
+        palavra008 = {
+            nome: "POSTURA NO TRABALHO",
+            categoria: "NR17",
+            explicacao: "Ergonomia Física ocupa-se das características da anatomia humana, antropometria, fisiologia e biomecânica, relacionados com a atividade física.",
+        },
+        palavra009 = {
+            nome: "MOVIMENTOS REPETITIVOS",
+            categoria: "NR17",
+            explicacao: "Ergonomia Física ocupa-se das características da anatomia humana, antropometria, fisiologia e biomecânica, relacionados com a atividade física."
+        },
+        palavra010 = {
+            nome: "MÚSCULO ESQUELÉTICO",
+            categoria: "NR17",
+            explicacao: "DISTURBIO MÚSCULO ESQUELÉTICO - A Ergonomia Física ocupa-se das características da anatomia humana, antropometria, fisiologia e biomecânica, relacionados com a atividade física."
+        }
+
+        palavra011 = {
+            nome: "ERRO DE PERCEPÇÃO",
+            categoria: "FUNDAMENTOS BÁSICOS",
+            explicacao: "são obstáculos mentais que nos impedem de perceber claramente o problema ou a informação necessária para resolvê-lo."
+        }
+
+        palavra012 = {
+            nome: "ERRO DE DECISÃO",
+            categoria: "FUNDAMENTOS BÁSICOS",
+            explicacao: "São erros gerados por uma tomada de descisão errada, que podem ser ocasionadas por: incompetência, desatenção, falta de treinamentos, corrupção.
+        }
+
+        palavra013 = {
+            nome: "ERRO DE AÇÃO",
+            categoria: "FUNDAMENTOS BÁSICOS",
+            explicacao: "Quando a ação realizada não gera o benefício esperado. Algumas vezes a necessidade de tomar uma ação rápida para um problema em questão pode vir de uma tomada descisão precoce ocasionadas por: incompetência, desatenção, falta de treinamentos, corrupção."
+        }
+
+        palavra014 = {
+            nome: "ERRO DE AÇÃO",
+            categoria: "FUNDAMENTOS BÁSICOS",
+            explicacao: "Quando a ação realizada não gera o benefício esperado. Algumas vezes a necessidade de tomar uma ação rápida para um problema em questão pode vir de uma tomada descisão precoce ocasionadas por: incompetência, desatenção, falta de treinamentos, corrupção."
+        }
+
+        palavra015 = {
+            nome: "SEGURANÇA NO TRABALHO",
+            categoria: "FUNDAMENTOS BÁSICOS",
+            explicacao: "Está relacionada a acidentes, condições perigosas; incidentes; erro humano; incêndios; eletricidade; ferramentas; controle e agentes mecânicos diversos."
+        }
+
+        palavra016 = {
+            nome: "HIGIENE OCUPACIONAL",
+            categoria: "FUNDAMENTOS BÁSICOS",
+            explicacao: "Está relacionada a doenças do trabalho e doencas ocupacionais geradas por agentes físicos, químicos, biológicos e ergonômicos."
+        }
+
+        palavra017 = {
+            nome: "PRODUTIVIDADE",
+            categoria: "FUNDAMENTOS BÁSICOS",
+            explicacao: "Melhorias envolvendo a segurança e higiene do trabalho podem levar a redução de acidentes e aumento da produtividade. Exemplos de melhorias: iluminação, conforto termico, equipamentos de segurança, etc."
+        }
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="icon" href="images/favicon.png" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos de Engenharia e Segurança no Trabalho</title>
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="css/estilo.css" />
+</head>
+
+<body>
+
+    <main class="tela-principal">
+
+        <section class='conteudos'>
+
+            <h1>Quiz - Fundamentos de Engenharia e Segurança no Trabalho</h1>
+
+            <article class='centro' id='instrucoes'>
+                Leia a questão e clique na resposta correta
+            </article>
+
+            <article class='questoes'>
+
+                <header class='questao'>
+                    <span id='numQuestao'></span>
+                    <h2 id='pergunta'></h2>
+                </header>
+
+                <figure class='imagemDaQuestao'>
+                    <img src="" alt="Img1" width="500px" height="300px" />
+                </figure>
+
+                <figure class='imagemDaQuestao2'>
+                    <img src="" alt="Img2" width="500px" height="300px" />
+                </figure>
+
+                <div class='corpo'>
+                    <ul type='A' id='alternativas'>
+                        <!--<button type="submit" id='a' class='respostas' onClick='verificarSeAcertou(this, this)'></button>
+                        <button type="submit" id='b' class='respostas' onClick='verificarSeAcertou(this, this)'></button>-->
+                        <li id='a' value='1A' class='respostas' onClick='verificarSeAcertou(this, this)'></li>
+                        <li id='b' value='1B' class='respostas' onClick='verificarSeAcertou(this, this)'></li>
+                    </ul>
+                </div>
+            </article>
+
+            <article id='aviso' class='centro'>
+                <input type="range" value='1' min='1' max='10' step='1' name="progresso" id="progresso" disabled /> <br>
+                <span id='numero'></span> de <span id='total'></span>
+            </article>
+
+            <footer id='autoria' class='centro'>Adaptado por Dr. Eng. Mecânica Paulo S. Olivio F. &copy; 2023</footer>
+
+        </section>
+
+    </main>
+    <audio preload src="assets/positive.mp3 " id='somAcerto'></audio>
+    <audio preload src="assets/negative.mp3 " id='somErro'></audio>
+    <audio preload src="assets/aplausos.mp3 " id='somAplausos'></audio>
+    <!-- JS externo -->
+    <script src="js/questoes.js "></script>
+
+</body>
+
+</html>
