@@ -36,16 +36,18 @@ const q0 = {
     alternativaD: "Alternativa D",
     correta: "0",
 }
+
 const q1 = {
     numQuestao: 1 + '.',
     imagem: '1.png', // ADICIONE
-    pergunta: "A partir de quantos funcionários é obrigatorio a criação da CIPA em empresas ou organizações",
-    alternativaA: "Empresas com mais de 100 funcionários",
-    alternativaB: "Empresas com mais de 10 funcionários",
-    alternativaC: "Empresas com mais de 50 funcionários",
-    alternativaD: "Empresas com mais de 30 funcionários",
-    correta: "Empresas com mais de 50 funcionários",
+    pergunta: "Sobre a CIPA. Selecione a afirmativa correta",
+    alternativaA: "Quando o estabelecimento não se enquadrar, a empresa designará um responsável pelo cumprimento dos objetivos desta NR, podendo ser adotados mecanismos  de participação dos empregados, através de negociação coletiva.",
+    alternativaB: "O número de membros e titulares e suplentes da CIPA, considerando a ordem  decrescente de votos recebidos, observará o dimensionamento previsto na NR06.",
+    alternativaC: "Os representantes dos empregados, titulares e suplentes, serão eleitos em (voto) aberto, independentemente de filiação sindical.",
+    alternativaD: "Os representantes dos empregados, titulares e suplentes, serão designados pelo empregador.",
+    correta: "Quando o estabelecimento não se enquadrar, a empresa designará um responsável pelo cumprimento dos objetivos desta NR, podendo ser adotados mecanismos  de participação dos empregados, através de negociação coletiva.",
 }
+
 const q2 = {
     numQuestao: 2 + '.',
     imagem: '2.png', // ADICIONE
@@ -89,12 +91,12 @@ const q5 = {
 const q6 = {
     numQuestao: 6 + '.',
     imagem: '1.png', // ADICIONE
-    pergunta: "A partir de quantos funcionários é obrigatorio a criação da CIPA em empresas ou organizações",
-    alternativaA: "Empresas com mais de 100 funcionários",
+    pergunta: "Atualmente a partir de quantos funcionários é obrigatório a criação da CIPA em empresas ou organizações",
+    alternativaA: "Empresas com mais de 50 funcionários",
     alternativaB: "Empresas com mais de 10 funcionários",
-    alternativaC: "Empresas com mais de 50 funcionários",
+    alternativaC: "Empresas com mais de 20 funcionários",
     alternativaD: "Empresas com mais de 30 funcionários",
-    correta: "Empresas com mais de 50 funcionários",
+    correta: "Empresas com mais de 20 funcionários",
 }
 const q7 = {
     numQuestao: 7 + '.',
