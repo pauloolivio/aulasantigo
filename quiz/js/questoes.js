@@ -27,7 +27,7 @@ let articleQuestoes = document.querySelector('.questoes')
 let alternativas = document.querySelector('#alternativas')
 
 const q0 = {
-    numQuestao: 0,
+    numQuestao: 0 + '.',
     imagem: '0.png', // ADICIONE
     pergunta: "Pergunta",
     alternativaA: "Alternativa A",
@@ -37,104 +37,104 @@ const q0 = {
     correta: "0",
 }
 const q1 = {
-    numQuestao: 1,
+    numQuestao: 1 + '.',
     imagem: '1.png', // ADICIONE
-    pergunta: "Fonte ou situação com potencial  para provocar danos em termos de  lesão, doença, dano à propriedade,  meio ambiente, local de trabalho ou a  combinação destes",
-    alternativaA: "Risco",
-    alternativaB: "Perigo",
-    alternativaC: "Ato inseguro",
-    alternativaD: "Condição insegura",
-    correta: "Perigo",
+    pergunta: "A partir de quantos funcionários é obrigatorio a criação da CIPA em empresas ou organizações",
+    alternativaA: "Empresas com mais de 100 funcionários",
+    alternativaB: "Empresas com mais de 10 funcionários",
+    alternativaC: "Empresas com mais de 50 funcionários",
+    alternativaD: "Empresas com mais de 30 funcionários",
+    correta: "Empresas com mais de 50 funcionários",
 }
 const q2 = {
-    numQuestao: 2,
+    numQuestao: 2 + '.',
     imagem: '2.png', // ADICIONE
-    pergunta: "Qual é a capital do Brasil?",
-    alternativaA: "Rio de Janeiro",
-    alternativaB: "Brasília",
-    alternativaC: "Salvador",
-    alternativaD: "Lisboa",
-    correta: "Brasília",
+    pergunta: "Assinale a afirmativa que melhor descreve os orgãos que devem contruir a CIPA?",
+    alternativaA: "Empresas privadas, públicas, sociedades de economia mista, órgãos de administração direta e indireta, instituições beneficentes associações recreativas, cooperativas, sociedade autonoma.",
+    alternativaB: "Empresas privadas, públicas, sociedades de economia mista, órgãos de administração direta e indireta, instituições beneficentes associações recreativas, cooperativas, instituições que admitam trabalhadores.",
+    alternativaC: "Empresas privadas, públicas, sociedades de economia mista, instituições beneficentes associações recreativas, cooperativas, sociedade autonoma, instituições que admitam trabalhadores.",
+    alternativaD: "Empresas privadas, públicas, sociedades de economia mista, instituições beneficentes associações recreativas, cooperativas, instituições que admitam trabalhadores.",
+    correta: "Empresas privadas, públicas, sociedades de economia mista, órgãos de administração direta e indireta, instituições beneficentes associações recreativas, cooperativas, instituições que admitam trabalhadores.",
 }
 const q3 = {
-    numQuestao: 3,
+    numQuestao: 3 + '.',
     imagem: '3.png', // ADICIONE
-    pergunta: "Austral é o mesmo que...",
-    alternativaA: "Oeste",
-    alternativaB: "Leste",
-    alternativaC: "Norte",
-    alternativaD: "Sul",
-    correta: "Sul",
+    pergunta: "Assinale afirmativa que melhor descreve os representantes da CIPA",
+    alternativaA: "Os representantes dos empregados, titulares e suplentes, serão designados pelos empregados, sendo o presidente designado pelo empregador e os demais eleitos em (voto) secreto pelos empregados, independentemente de filiação sindical.",
+    alternativaB: "Os representantes dos empregados, titulares e suplentes, serão designados pelos empregados, sendo todos eleitos em (voto) secreto pelos empregados, independentemente de filiação sindical.",
+    alternativaC: "Os representantes dos empregados, titulares e suplentes, serão designados pelos empregados e empregadores, sendo todos eleitos em (voto) secreto pelos empregados e empregadores, independentemente de filiação sindical.",
+    alternativaD: "Os representantes dos empregados, titulares e suplentes, serão designados pelos empregados e empregadores, sendo o presidente designado pelo empregador e os demais eleitos em (voto) secreto, independentemente de filiação sindical.",
+    correta: "Os representantes dos empregados, titulares e suplentes, serão designados pelos empregados e empregadores, sendo o presidente designado pelo empregador e os demais eleitos em (voto) secreto, independentemente de filiação sindical.",
 }
 const q4 = {
     numQuestao: 4,
     imagem: '4.png', // ADICIONE
-    pergunta: "A linha do Equador divide a Terra em...",
-    alternativaA: "Leste e Oeste",
-    alternativaB: "Norte e Sul",
-    alternativaC: "Verão e Inverno",
-    alternativaD: "Solstícios e Eclipses",
-    correta: "Norte e Sul",
+    pergunta: "O que é uma doença profissional.",
+    alternativaA: "Doença produzida ou desencadeada pelo exercício do trabalho peculiar a determinada atividade e constante da respectiva relação elaborada pelo Ministério do Trabalho e da Previdência Social",
+    alternativaB: "Doença produzida ou desencadeada pelo exercício do trabalho peculiar a determinada atividade e sem a respectiva relação elaborada pelo Ministério do Trabalho e da Previdência Social",
+    alternativaC: "Doença adquirida ou desencadeada em função de condições  especiais em que o trabalho é realizado e com ele se relacione diretamente.",
+    alternativaD: "Doença adquirida ou desencadeada em função de condições  especiais em que o trabalho é realizado e com ele se relacione diretamente ou indiretamente.",
+    correta: "Doença produzida ou desencadeada pelo exercício do trabalho peculiar a determinada atividade e constante da respectiva relação elaborada pelo Ministério do Trabalho e da Previdência Social",
 }
 const q5 = {
     numQuestao: 5,
     imagem: '5.png', // ADICIONE
-    pergunta: "Nascente é o mesmo que...",
-    alternativaA: "Lado que o sol nasce",
-    alternativaB: "Abaixo do Equador",
-    alternativaC: "Lado que o sol se põe",
-    alternativaD: "Acima do Equador",
-    correta: "Lado que o sol nasce",
+    pergunta: "O que é uma Doença do trabalho.",
+    alternativaA: "Doença produzida ou desencadeada pelo exercício do trabalho peculiar a determinada atividade e constante da respectiva relação elaborada pelo Ministério do Trabalho e da Previdência Social",
+    alternativaB: "Doença produzida ou desencadeada pelo exercício do trabalho peculiar a determinada atividade e sem a respectiva relação elaborada pelo Ministério do Trabalho e da Previdência Social",
+    alternativaC: "Doença adquirida ou desencadeada em função de condições  especiais em que o trabalho é realizado e com ele se relacione diretamente.",
+    alternativaD: "Doença adquirida ou desencadeada em função de condições  especiais em que o trabalho é realizado e com ele se relacione diretamente ou indiretamente.",
+    correta: "Doença adquirida ou desencadeada em função de condições  especiais em que o trabalho é realizado e com ele se relacione diretamente.",
 }
 const q6 = {
-    numQuestao: 6,
-    imagem: '6.png', // ADICIONE
-    pergunta: "Qual é o clima predominante do Brasil?",
-    alternativaA: "Polar",
-    alternativaB: "Tropical",
-    alternativaC: "Desértico",
-    alternativaD: "Temperado do Norte",
-    correta: "Tropical",
+    numQuestao: 6 + '.',
+    imagem: '1.png', // ADICIONE
+    pergunta: "A partir de quantos funcionários é obrigatorio a criação da CIPA em empresas ou organizações",
+    alternativaA: "Empresas com mais de 100 funcionários",
+    alternativaB: "Empresas com mais de 10 funcionários",
+    alternativaC: "Empresas com mais de 50 funcionários",
+    alternativaD: "Empresas com mais de 30 funcionários",
+    correta: "Empresas com mais de 50 funcionários",
 }
 const q7 = {
-    numQuestao: 7,
-    imagem: '7.png', // ADICIONE
-    pergunta: "Poente é o mesmo que...",
-    alternativaA: "Lado onde o sol se põe",
-    alternativaB: "Lado onde o sol nasce",
-    alternativaC: "Abaixo do Equador",
-    alternativaD: "Acima do Equador",
-    correta: "Lado onde o sol se põe",
+    numQuestao: 7 + '.',
+    imagem: '2.png', // ADICIONE
+    pergunta: "Assinale a afirmativa que melhor descreve os orgãos que devem contruir a CIPA?",
+    alternativaA: "Empresas privadas, públicas, sociedades de economia mista, órgãos de administração direta e indireta, instituições beneficentes associações recreativas, cooperativas, sociedade autonoma.",
+    alternativaB: "Empresas privadas, públicas, sociedades de economia mista, órgãos de administração direta e indireta, instituições beneficentes associações recreativas, cooperativas, instituições que admitam trabalhadores.",
+    alternativaC: "Empresas privadas, públicas, sociedades de economia mista, instituições beneficentes associações recreativas, cooperativas, sociedade autonoma, instituições que admitam trabalhadores.",
+    alternativaD: "Empresas privadas, públicas, sociedades de economia mista, instituições beneficentes associações recreativas, cooperativas, instituições que admitam trabalhadores.",
+    correta: "Empresas privadas, públicas, sociedades de economia mista, órgãos de administração direta e indireta, instituições beneficentes associações recreativas, cooperativas, instituições que admitam trabalhadores.",
 }
 const q8 = {
-    numQuestao: 8,
-    imagem: '8.png', // ADICIONE
-    pergunta: "O Brasil se localiza em qual continente?",
-    alternativaA: "África",
-    alternativaB: "Europa",
-    alternativaC: "Oceania",
-    alternativaD: "América",
-    correta: "América",
+    numQuestao: 8 + '.',
+    imagem: '3.png', // ADICIONE
+    pergunta: "Assinale afirmativa que melhor descreve os representantes da CIPA",
+    alternativaA: "Os representantes dos empregados, titulares e suplentes, serão designados pelos empregados, sendo o presidente designado pelo empregador e os demais eleitos em (voto) secreto pelos empregados, independentemente de filiação sindical.",
+    alternativaB: "Os representantes dos empregados, titulares e suplentes, serão designados pelos empregados, sendo todos eleitos em (voto) secreto pelos empregados, independentemente de filiação sindical.",
+    alternativaC: "Os representantes dos empregados, titulares e suplentes, serão designados pelos empregados e empregadores, sendo todos eleitos em (voto) secreto pelos empregados e empregadores, independentemente de filiação sindical.",
+    alternativaD: "Os representantes dos empregados, titulares e suplentes, serão designados pelos empregados e empregadores, sendo o presidente designado pelo empregador e os demais eleitos em (voto) secreto, independentemente de filiação sindical.",
+    correta: "Os representantes dos empregados, titulares e suplentes, serão designados pelos empregados e empregadores, sendo o presidente designado pelo empregador e os demais eleitos em (voto) secreto, independentemente de filiação sindical.",
 }
 const q9 = {
     numQuestao: 9,
-    imagem: '9.png', // ADICIONE
-    pergunta: "Qual é a única capital do Brasil cortada pela linha do Equador?",
-    alternativaA: "Belém",
-    alternativaB: "São Luís",
-    alternativaC: "Macapá",
-    alternativaD: "Boa Vista",
-    correta: "Macapá",
+    imagem: '4.png', // ADICIONE
+    pergunta: "O que é uma doença profissional.",
+    alternativaA: "Doença produzida ou desencadeada pelo exercício do trabalho peculiar a determinada atividade e constante da respectiva relação elaborada pelo Ministério do Trabalho e da Previdência Social",
+    alternativaB: "Doença produzida ou desencadeada pelo exercício do trabalho peculiar a determinada atividade e sem a respectiva relação elaborada pelo Ministério do Trabalho e da Previdência Social",
+    alternativaC: "Doença adquirida ou desencadeada em função de condições  especiais em que o trabalho é realizado e com ele se relacione diretamente.",
+    alternativaD: "Doença adquirida ou desencadeada em função de condições  especiais em que o trabalho é realizado e com ele se relacione diretamente ou indiretamente.",
+    correta: "Doença produzida ou desencadeada pelo exercício do trabalho peculiar a determinada atividade e constante da respectiva relação elaborada pelo Ministério do Trabalho e da Previdência Social",
 }
 const q10 = {
     numQuestao: 10,
-    imagem: '10.png', // ADICIONE
-    pergunta: "Considerando a extensão territorial o Brasil é o ...",
-    alternativaA: "3º maior",
-    alternativaB: "2º maior",
-    alternativaC: "4º maior",
-    alternativaD: "5º maior",
-    correta: "5º maior",
+    imagem: '5.png', // ADICIONE
+    pergunta: "O que é uma Doença do trabalho.",
+    alternativaA: "Doença produzida ou desencadeada pelo exercício do trabalho peculiar a determinada atividade e constante da respectiva relação elaborada pelo Ministério do Trabalho e da Previdência Social",
+    alternativaB: "Doença produzida ou desencadeada pelo exercício do trabalho peculiar a determinada atividade e sem a respectiva relação elaborada pelo Ministério do Trabalho e da Previdência Social",
+    alternativaC: "Doença adquirida ou desencadeada em função de condições  especiais em que o trabalho é realizado e com ele se relacione diretamente.",
+    alternativaD: "Doença adquirida ou desencadeada em função de condições  especiais em que o trabalho é realizado e com ele se relacione diretamente ou indiretamente.",
+    correta: "Doença adquirida ou desencadeada em função de condições  especiais em que o trabalho é realizado e com ele se relacione diretamente.",
 }
 
 // CONSTANTE COM UM ARRAY DE OBJETOS COM TODAS AS QUESTOES
@@ -242,7 +242,8 @@ function verificarSeAcertou(nQuestao, resposta) {
 
     // atualizar placar
     placar = pontos
-    instrucoes.textContent = "Pontos " + placar
+    instrucoes.textContent = "Pontos" + " " +
+        placar
 
     // bloquear a escolha de opcoes
     bloquearAlternativas()
@@ -259,6 +260,7 @@ function verificarSeAcertou(nQuestao, resposta) {
         }
     }, 150)
     desbloquearAlternativas()
+
 }
 
 function fimDoJogo() {
