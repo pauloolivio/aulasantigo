@@ -1,0 +1,85 @@
+.questao {
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: baseline;
+}
+
+#numQuestao {
+    display: flex;
+    padding-right: 20px;
+}
+
+
+/* article que acomoda a questao completa */
+
+.questoes ul li:hover {
+    background: var(--principal);
+    cursor: pointer;
+}
+
+.bloqueado {
+    display: none;
+}
+
+.bloqueado li:hover {
+    display: none;
+}
+
+#instrucoes {
+    color: #191919;
+    padding: 0.625rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* ANIMACAO */
+
+@keyframes piscar {
+    0% {
+        filter: drop-shadow(0 0 15px var(--principal));
+        -webkit-filter: drop-shadow(0 0 15px var(--principal));
+        -moz-filter: drop-shadow(0 0 15px var(--principal));
+        -o-filter: drop-shadow(0 0 15px var(--principal));
+        -ms-filter: drop-shadow(0 0 15px var(--principal));
+    }
+    100% {}
+}
+
+.animar {
+    animation: piscar .75s infinite alternate;
+}
+
+.aparecer {
+    animation: aparecer .5s infinite alternate;
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.acertou {
+    background: var(--verde);
+    animation: aparecer 0.1s infinite alternate;
+}
+
+.errou {
+    background: var(--vermelho);
+    animation: aparecer 0.1s infinite alternate;
+}
+
+.placar {
+    padding: 1rem;
+    border-radius: 8px;
+    background: #03a9f4;
+    font-size: 2rem;
+}
