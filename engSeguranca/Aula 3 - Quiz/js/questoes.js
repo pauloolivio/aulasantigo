@@ -40,11 +40,11 @@ const q1 = {
     numQuestao: 1 + '.',
     imagem: '1.png', // ADICIONE
     pergunta: "A partir de quantos funcionários é obrigatorio a criação da CIPA em empresas ou organizações",
-    alternativaA: "Empresas com mais de 100 funcionários",
+    alternativaA: "Empresas com mais de 50 funcionários",
     alternativaB: "Empresas com mais de 10 funcionários",
-    alternativaC: "Empresas com mais de 50 funcionários",
-    alternativaD: "Empresas com mais de 30 funcionários",
-    correta: "Empresas com mais de 50 funcionários",
+    alternativaC: "Empresas com mais de 30 funcionários",
+    alternativaD: "Empresas com mais de 20 funcionários",
+    correta: "Empresas com mais de 20 funcionários",
 }
 const q2 = {
     numQuestao: 2 + '.',
@@ -90,11 +90,11 @@ const q6 = {
     numQuestao: 6 + '.',
     imagem: '1.png', // ADICIONE
     pergunta: "A partir de quantos funcionários é obrigatorio a criação da CIPA em empresas ou organizações",
-    alternativaA: "Empresas com mais de 100 funcionários",
+    alternativaA: "Empresas com mais de 50 funcionários",
     alternativaB: "Empresas com mais de 10 funcionários",
-    alternativaC: "Empresas com mais de 50 funcionários",
-    alternativaD: "Empresas com mais de 30 funcionários",
-    correta: "Empresas com mais de 50 funcionários",
+    alternativaC: "Empresas com mais de 30 funcionários",
+    alternativaD: "Empresas com mais de 20 funcionários",
+    correta: "Empresas com mais de 20 funcionários",
 }
 const q7 = {
     numQuestao: 7 + '.',
