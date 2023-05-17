@@ -1,0 +1,99 @@
+ * {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+ }
+ 
+ .titulo {
+     display: flex;
+     justify-content: center;
+     margin-top: 10px;
+     margin-bottom: 10px;
+ }
+ 
+ header {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin: 0 auto;
+     font-size: 20px;
+     width: 630px;
+     border-radius: 10;
+     height: 40px;
+     gap: 180px;
+     color: white;
+     padding-top: 25px;
+     padding-bottom: 25px;
+     border-radius: 5px;
+ }
+ 
+ .memory-game {
+     width: 500px;
+     height: 500px;
+     margin: auto;
+     display: flex;
+     flex-wrap: wrap;
+     perspective: 1000px;
+ }
+ 
+ .memory-card {
+     width: calc(25% - 10px);
+     height: calc(25% - 10px);
+     margin: 5px;
+     position: relative;
+     transform: scale(1);
+     transform-style: preserve-3d;
+     transition: transform 0.5s;
+     box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+ }
+ 
+ .memory-card:active {
+     transform: scale(0.97);
+     transition: transform 0.2s;
+ }
+ 
+ .memory-card.flip {
+     transform: rotateY(180deg);
+ }
+ 
+ .front-face,
+ .back-face {
+     width: 100%;
+     height: 100%;
+     padding: 10px;
+     position: absolute;
+     border-radius: 5px;
+     background: #5d5d5d;
+     backface-visibility: hidden;
+ }
+ 
+ .back-face {
+     font-size: 16;
+ }
+ 
+ .front-face {
+     transform: rotateY(180deg);
+ }
+ 
+ footer {
+     display: flex;
+     flex-direction: column;
+     width: 635px;
+     height: 30px;
+     margin: 0 auto;
+     justify-content: center;
+     align-items: center;
+     margin-bottom: 10px;
+     margin-top: 10px;
+ }
+ 
+ .Button1 {
+     background-color: #5d5d5d;
+     width: 500px;
+     height: 30px;
+     color: white;
+ }
+ 
+ #copyright {
+     margin-top: 5px;
+ }
