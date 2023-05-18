@@ -49,7 +49,7 @@ const q1 = {
 const q2 = {
     numQuestao: 2 + '.',
     imagem: '2.png', // ADICIONE
-    pergunta: "Assinale a afirmativa abaixo não é uma das principais premissas de segurança em máquinas e equipamentos.",
+    pergunta: "Assinale a afirmativa abaixo que não é uma das principais premissas de segurança em máquinas e equipamentos.",
     alternativaA: "Todos os pontos de perigo devem ser protegidos",
     alternativaB: "As proteções fixas e móveis devem ser dimensionadas de acordo com o ANEXO I da NR-13.",
     alternativaC: "As proteções móveis devem possuir sistema de segurança com categoria adequada.",
@@ -69,7 +69,7 @@ const q3 = {
 const q4 = {
     numQuestao: 4,
     imagem: '4.png', // ADICIONE
-    pergunta: "Das afirmativas abaixo, apresenta requisitos aplicáveis a norma de segurança em máquinas e equipamentos.",
+    pergunta: "Quais das afirmativas abaixo apresenta requisitos aplicáveis a norma de segurança em máquinas e equipamentos.",
     alternativaA: "Movidos ou impulsionados por força humana ou animal e eletrodométicos",
     alternativaB: "Eletrodométicos e máquinas e equipamentos expostos em museus, feiras e eventos, para fins históricos.",
     alternativaC: "Antiguidades que não sejam mais empregados com fins produtivos, desde que sejam adotadas medidas que garantam a preservação da integridade física dos visitantes e expositores",
@@ -104,7 +104,7 @@ const q7 = {
     alternativaB: "Saídas suficientes para a rápida retirada do pessoal em serviço, em caso de incêndio. Equipamento suficiente para combater o fogo em seu início. Pessoas treinadas no uso correto dos equipamentos de combate ao incêndio",
     alternativaC: "Placas de sinalização. Equipamento suficiente para combater o fogo em seu início. Pessoas treinadas no uso correto dos equipamentos de combate ao incêndio",
     alternativaD: "Extintores da Classe D. Sistemas de proteção contra incêndio. Saídas suficientes para a rápida retirada do pessoal em serviço, em caso de incêndio. Equipamento suficiente para combater o fogo em seu início",
-    correta: "Extintores da classe D. Sistemas de proteção contra incêndio. Saídas suficientes para a rápida retirada do pessoal em serviço, em caso de incêndio. Equipamento suficiente para combater o fogo em seu início",
+    correta: "Extintores da Classe D. Sistemas de proteção contra incêndio. Saídas suficientes para a rápida retirada do pessoal em serviço, em caso de incêndio. Equipamento suficiente para combater o fogo em seu início",
 }
 const q8 = {
     numQuestao: 8 + '.',
@@ -130,8 +130,8 @@ const q10 = {
     numQuestao: 10,
     imagem: '5.png', // ADICIONE
     pergunta: "Qual dos itens apresenta elementos que não são de combate ao incêndio.",
-    alternativaA: "Portas corta fogo, sinalização, extintores, hidrantes, sistemas de alarmes, saidas de emergênciam.",
-    alternativaB: "Areia, limalha de ferro fundido, extintores, hidrantes, sistemas de alarmes, saidas de emergênciam.",
+    alternativaA: "Portas corta fogo, sinalização, extintores, hidrantes, sistemas de alarmes, saidas de emergência.",
+    alternativaB: "Areia, limalha de ferro fundido, extintores, hidrantes, sistemas de alarmes, saidas de emergência.",
     alternativaC: "Portas corta fogo, sinalização, extintores, hidrantes, portas corta fogo, sinalização.",
     alternativaD: "Areia, limalha de aluminio e magnésio, extintores, hidrantes.",
     correta: "Areia, limalha de aluminio e magnésio, extintores, hidrantes.",
