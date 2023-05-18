@@ -103,8 +103,8 @@ const q7 = {
     alternativaA: "Sistemas de proteção contra incêndio. Saídas suficientes para a rápida retirada do pessoal em serviço, em caso de incêndio. Equipamento suficiente para combater o fogo em seu início",
     alternativaB: "Saídas suficientes para a rápida retirada do pessoal em serviço, em caso de incêndio. Equipamento suficiente para combater o fogo em seu início. Pessoas treinadas no uso correto dos equipamentos de combate ao incêndio",
     alternativaC: "Placas de sinalização. Equipamento suficiente para combater o fogo em seu início. Pessoas treinadas no uso correto dos equipamentos de combate ao incêndio",
-    alternativaD: "Extintores da Classe D. Sistemas de proteção contra incêndio. Saídas suficientes para a rápida retirada do pessoal em serviço, em caso de incêndio. Equipamento suficiente para combater o fogo em seu início",
-    correta: "Extintores da Classe D. Sistemas de proteção contra incêndio. Saídas suficientes para a rápida retirada do pessoal em serviço, em caso de incêndio. Equipamento suficiente para combater o fogo em seu início",
+    alternativaD: "Extintores da classe D. Sistemas de proteção contra incêndio. Saídas suficientes para a rápida retirada do pessoal em serviço, em caso de incêndio. Equipamento suficiente para combater o fogo em seu início",
+    correta: "Extintores da classe D. Sistemas de proteção contra incêndio. Saídas suficientes para a rápida retirada do pessoal em serviço, em caso de incêndio. Equipamento suficiente para combater o fogo em seu início",
 }
 const q8 = {
     numQuestao: 8 + '.',
