@@ -17,21 +17,24 @@
     <script language="JavaScript" type="text/javascript" src="js/dragsort.js"></script>
     <script language="JavaScript" type="text/javascript" src="js/cookies.js"></script>
 
-    <script language="JavaScript" type="text/javascript">
-        var dragsort = ToolMan.dragsort()
-        var junkdrawer = ToolMan.junkdrawer()
+    <script type="text/javascript">
+        var dragsort = ToolMan.dragsort();
+        var junkdrawer = ToolMan.junkdrawer();
 
-        window.onload = function() {
-            junkdrawer.restoreListOrder("boxes")
+        function init() {
+            junkdrawer.restoreListOrder("boxes");
 
-            dragsort.makeListSortable(document.getElementById("boxes"),
-                verticalOnly, saveOrder)
-
+            if ('ontouchstart' in window) {
+                // Dispositivo com tela sensível ao toque
+                dragsort.makeListSortable(document.getElementById("boxes"), null, saveOrder);
+            } else {
+                // Dispositivo com mouse
+                dragsort.makeListSortable(document.getElementById("boxes"), verticalOnly, saveOrder);
+            }
         }
 
         function verticalOnly(item) {
-            item.toolManDragGroup()
-
+            item.toolManDragGroup();
         }
 
         function speak(id, what) {
@@ -40,16 +43,18 @@
         }
 
         function saveOrder(item) {
-            var group = item.toolManDragGroup
-            var list = group.element.parentNode
-            var id = list.getAttribute("id")
-            if (id == null) return
+            var group = item.toolManDragGroup;
+            var list = group.element.parentNode;
+            var id = list.getAttribute("id");
+            if (id == null) return;
             group.register('dragend', function() {
-                ToolMan.cookies().set("list-" + id,
-                    junkdrawer.serializeList(list), 365)
-            })
+                ToolMan.cookies().set("list-" + id, junkdrawer.serializeList(list), 365);
+            });
         }
+
+        window.addEventListener('DOMContentLoaded', init);
     </script>
+
 </head>
 
 <body>
