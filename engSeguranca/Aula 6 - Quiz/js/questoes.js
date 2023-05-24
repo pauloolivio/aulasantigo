@@ -39,102 +39,102 @@ const q0 = {
 const q1 = {
     numQuestao: 1 + '.',
     imagem: '1.png', // ADICIONE
-    pergunta: "A partir de quantos funcionários é obrigatorio a criação da CIPA em empresas ou organizações",
-    alternativaA: "Empresas com mais de 100 funcionários",
-    alternativaB: "Empresas com mais de 10 funcionários",
-    alternativaC: "Empresas com mais de 50 funcionários",
-    alternativaD: "Empresas com mais de 30 funcionários",
-    correta: "Empresas com mais de 50 funcionários",
+    pergunta: "Quais os requisistos estabelecidos pela norma regulamentadora NR 10?",
+    alternativaA: "Estabelece requisitos mínimos para a prevenção de acidentes e doenças do trabalho nas fases de projeto e de utilização de máquinas e equipamentos de todos os tipos",
+    alternativaB: "Estabelece requisitos mínimos para gestão da integridade estrutural de caldeiras a vapor, vasos de pressão e suas tubulações de interligação nos aspectos relacionados à instalação, inspeção, operação e manutenção, visando à segurança e à saúde dos trabalhadores.",
+    alternativaC: "Estabelece os requisitos e condições mínimas objetivando a implementação de medidas de controle e sistemas preventivos, de forma a garantir a segurança e a saúde dos trabalhadores que, direta ou indiretamente, interajam em instalações elétricas e serviços com eletricidade.",
+    alternativaD: "Estabelece diretrizes e requisitos para o desenvolvimento do Programa de Controle Médico de Saúde Ocupacional nas organizações, com o objetivo de proteger e preservar a saúde de seus empregados em relação aos riscos ocupacionais, conforme avaliação de riscos do Programa de Gerenciamento de Risco da organização.",
+    correta: "Estabelece os requisitos e condições mínimas objetivando a implementação de medidas de controle e sistemas preventivos, de forma a garantir a segurança e a saúde dos trabalhadores que, direta ou indiretamente, interajam em instalações elétricas e serviços com eletricidade.",
 }
 const q2 = {
     numQuestao: 2 + '.',
     imagem: '2.png', // ADICIONE
-    pergunta: "Assinale a afirmativa que melhor descreve os orgãos que devem contruir a CIPA?",
-    alternativaA: "Empresas privadas, públicas, sociedades de economia mista, órgãos de administração direta e indireta, instituições beneficentes associações recreativas, cooperativas, sociedade autonoma.",
-    alternativaB: "Empresas privadas, públicas, sociedades de economia mista, órgãos de administração direta e indireta, instituições beneficentes associações recreativas, cooperativas, instituições que admitam trabalhadores.",
-    alternativaC: "Empresas privadas, públicas, sociedades de economia mista, instituições beneficentes associações recreativas, cooperativas, sociedade autonoma, instituições que admitam trabalhadores.",
-    alternativaD: "Empresas privadas, públicas, sociedades de economia mista, instituições beneficentes associações recreativas, cooperativas, instituições que admitam trabalhadores.",
-    correta: "Empresas privadas, públicas, sociedades de economia mista, órgãos de administração direta e indireta, instituições beneficentes associações recreativas, cooperativas, instituições que admitam trabalhadores.",
+    pergunta: "Com base no uso de normas e recomendações técnicas. Assinale a sequência obrigatória para uso em procedimentos técnicos",
+    alternativaA: "1°) Normas internacionais, 2°) Normas oficiais NR’s e NBR’s, 3°) Definições do responsável técnico.",
+    alternativaB: "1°) Normas oficiais NR’s e NBR’s, 2°) Normas internacionais, 3°) Recomendações dos fabricantes.",
+    alternativaC: "1°) Normas internacionais, 2°) Normas oficiais NR’s e NBR’s, 3°) Recomendações dos fabricantes.",
+    alternativaD: "1°) Normas oficiais NR’s e NBR’s, 2°) Normas internacionais, 4°) Definições do responsável técnico que possa emitir art.",
+    correta: "1°) Normas oficiais NR’s e NBR’s, 2°) Normas internacionais, 3°) Recomendações dos fabricantes.",
 }
 const q3 = {
     numQuestao: 3 + '.',
     imagem: '3.png', // ADICIONE
-    pergunta: "Assinale afirmativa que melhor descreve os representantes da CIPA",
-    alternativaA: "Os representantes dos empregados, titulares e suplentes, serão designados pelos empregados, sendo o presidente designado pelo empregador e os demais eleitos em (voto) secreto pelos empregados, independentemente de filiação sindical.",
-    alternativaB: "Os representantes dos empregados, titulares e suplentes, serão designados pelos empregados, sendo todos eleitos em (voto) secreto pelos empregados, independentemente de filiação sindical.",
-    alternativaC: "Os representantes dos empregados, titulares e suplentes, serão designados pelos empregados e empregadores, sendo todos eleitos em (voto) secreto pelos empregados e empregadores, independentemente de filiação sindical.",
-    alternativaD: "Os representantes dos empregados, titulares e suplentes, serão designados pelos empregados e empregadores, sendo o presidente designado pelo empregador e os demais eleitos em (voto) secreto, independentemente de filiação sindical.",
-    correta: "Os representantes dos empregados, titulares e suplentes, serão designados pelos empregados e empregadores, sendo o presidente designado pelo empregador e os demais eleitos em (voto) secreto, independentemente de filiação sindical.",
+    pergunta: "Qual NBRs não é uma norma utilizadas em instalações elétricas?",
+    alternativaA: "NBR 15417",
+    alternativaB: "NBR 14039",
+    alternativaC: "NBR 8222",
+    alternativaD: "NBR 5410",
+    correta: "NBR 15417",
 }
 const q4 = {
     numQuestao: 4,
     imagem: '4.png', // ADICIONE
-    pergunta: "O que é uma doença profissional.",
-    alternativaA: "Doença produzida ou desencadeada pelo exercício do trabalho peculiar a determinada atividade e constante da respectiva relação elaborada pelo Ministério do Trabalho e da Previdência Social",
-    alternativaB: "Doença produzida ou desencadeada pelo exercício do trabalho peculiar a determinada atividade e sem a respectiva relação elaborada pelo Ministério do Trabalho e da Previdência Social",
-    alternativaC: "Doença adquirida ou desencadeada em função de condições  especiais em que o trabalho é realizado e com ele se relacione diretamente.",
-    alternativaD: "Doença adquirida ou desencadeada em função de condições  especiais em que o trabalho é realizado e com ele se relacione diretamente ou indiretamente.",
-    correta: "Doença produzida ou desencadeada pelo exercício do trabalho peculiar a determinada atividade e constante da respectiva relação elaborada pelo Ministério do Trabalho e da Previdência Social",
+    pergunta: "Os acidentes em instalações elétricas acontecem normalmente por alguns motivos. Assinale a afirmativa incorreta.",
+    alternativaA: "Falta de conhecimento, Falha no treinamento, Praticas inadequadas",
+    alternativaB: "Ambiente de trabalho cheio de riscos, Falha na supervisão, Falta de conhecimento",
+    alternativaC: "Falha no treinamento, Práticas inadequadas de trabalho, Manutenção ruim",
+    alternativaD: "Instalações precárias, Falta de supervisão, instalações adequadas",
+    correta: "Instalações precárias, Falta de supervisão, instalações adequadas",
 }
 const q5 = {
     numQuestao: 5,
     imagem: '5.png', // ADICIONE
-    pergunta: "O que é uma Doença do trabalho.",
-    alternativaA: "Doença produzida ou desencadeada pelo exercício do trabalho peculiar a determinada atividade e constante da respectiva relação elaborada pelo Ministério do Trabalho e da Previdência Social",
-    alternativaB: "Doença produzida ou desencadeada pelo exercício do trabalho peculiar a determinada atividade e sem a respectiva relação elaborada pelo Ministério do Trabalho e da Previdência Social",
-    alternativaC: "Doença adquirida ou desencadeada em função de condições  especiais em que o trabalho é realizado e com ele se relacione diretamente.",
-    alternativaD: "Doença adquirida ou desencadeada em função de condições  especiais em que o trabalho é realizado e com ele se relacione diretamente ou indiretamente.",
-    correta: "Doença adquirida ou desencadeada em função de condições  especiais em que o trabalho é realizado e com ele se relacione diretamente.",
+    pergunta: "Qual a sequência correta de um sistema de instalação eletrica da geração a distribuição de energia. Assinale a afirmativa correnta.",
+    alternativaA: "Usina geradora, estação elevador de tensão, estação rebaixadora, subestação, grandes consumidores",
+    alternativaB: "Usina geradora, estação elevador de tensão, subestação, estação rebaixadora, transformador, pequenos consumidores.",
+    alternativaC: "Usina geradora, estação elevador de tensão, estação rebaixadora, transformador, subestação, pequenos consumidores.",
+    alternativaD: "Usina geradora, estação elevador de tensão, estação rebaixadora, subestação, transformador, grandes consumidores",
+    correta: "Usina geradora, estação elevador de tensão, estação rebaixadora, subestação, grandes consumidores",
 }
 const q6 = {
     numQuestao: 6 + '.',
     imagem: '1.png', // ADICIONE
-    pergunta: "A partir de quantos funcionários é obrigatorio a criação da CIPA em empresas ou organizações",
-    alternativaA: "Empresas com mais de 100 funcionários",
-    alternativaB: "Empresas com mais de 10 funcionários",
-    alternativaC: "Empresas com mais de 50 funcionários",
-    alternativaD: "Empresas com mais de 30 funcionários",
-    correta: "Empresas com mais de 50 funcionários",
+    pergunta: "Com relação a alta tensão, baixa tensão e extrabaixa tensão. Qual classificação está incorreta?",
+    alternativaA: "Alta Tensão - tensão superior a 800 VAC ou 1500 VCC, Baixa Tensão – tensão superior a 50 VCA ou 120 VCC, Extrabaixa Tensão – tensão não superior a 50 VCA ou 120 VCC.",
+    alternativaB: "Alta Tensão - tensão superior a 1500 VAC ou 1000 VCC, Baixa Tensão – tensão superior a 50 VCA ou 120 VCC, Extrabaixa Tensão – tensão não superior a 50 VCA ou 120 VCC.",
+    alternativaC: "Alta Tensão - tensão superior a 1000 VAC ou 1500 VCC, Baixa Tensão – tensão superior a 50 VCA ou 120 VCC, Extrabaixa Tensão – tensão não superior a 50 VCA ou 120 VCC.",
+    alternativaD: "Alta Tensão - tensão superior a 1000 VAC ou 1500 VCC, Baixa Tensão – tensão superior a 50 VCA ou 200 VCC, Extrabaixa Tensão – tensão não superior a 50 VCA ou 120 VCC.",
+    correta: "Alta Tensão - tensão superior a 1000 VAC ou 1500 VCC, Baixa Tensão – tensão superior a 50 VCA ou 120 VCC, Extrabaixa Tensão – tensão não superior a 50 VCA ou 120 VCC.",
 }
 const q7 = {
     numQuestao: 7 + '.',
     imagem: '2.png', // ADICIONE
-    pergunta: "Assinale a afirmativa que melhor descreve os orgãos que devem contruir a CIPA?",
-    alternativaA: "Empresas privadas, públicas, sociedades de economia mista, órgãos de administração direta e indireta, instituições beneficentes associações recreativas, cooperativas, sociedade autonoma.",
-    alternativaB: "Empresas privadas, públicas, sociedades de economia mista, órgãos de administração direta e indireta, instituições beneficentes associações recreativas, cooperativas, instituições que admitam trabalhadores.",
-    alternativaC: "Empresas privadas, públicas, sociedades de economia mista, instituições beneficentes associações recreativas, cooperativas, sociedade autonoma, instituições que admitam trabalhadores.",
-    alternativaD: "Empresas privadas, públicas, sociedades de economia mista, instituições beneficentes associações recreativas, cooperativas, instituições que admitam trabalhadores.",
-    correta: "Empresas privadas, públicas, sociedades de economia mista, órgãos de administração direta e indireta, instituições beneficentes associações recreativas, cooperativas, instituições que admitam trabalhadores.",
+    pergunta: "Das medidas de controle em instalações elétricas. Assinale a alternativa correta.",
+    alternativaA: "Desenergização, tensão de segurança, isolação das partes vivas, obstáculos, barreiras, sinalização, seccionamento automático de alimentação, bloqueio religamento automático.",
+    alternativaB: "Desenergização, ausência de tensão de segurança, isolação das partes vivas, obstáculos, barreiras, sinalização, seccionamento automático de alimentação, bloqueio religamento automático.",
+    alternativaC: "Desenergização, tensão de segurança, isolação de periféricos, obstáculos, barreiras, sinalização, seccionamento automático de alimentação, bloqueio religamento automático.",
+    alternativaD: "Desenergização, aterramento de extrabaixa tensão, isolação das partes vivas, obstáculos, barreiras, sinalização, seccionamento automático de alimentação, bloqueio religamento automático.",
+    correta: "Desenergização, tensão de segurança, isolação das partes vivas, obstáculos, barreiras, sinalização, seccionamento automático de alimentação, bloqueio religamento automático.",
 }
 const q8 = {
     numQuestao: 8 + '.',
     imagem: '3.png', // ADICIONE
-    pergunta: "Assinale afirmativa que melhor descreve os representantes da CIPA",
-    alternativaA: "Os representantes dos empregados, titulares e suplentes, serão designados pelos empregados, sendo o presidente designado pelo empregador e os demais eleitos em (voto) secreto pelos empregados, independentemente de filiação sindical.",
-    alternativaB: "Os representantes dos empregados, titulares e suplentes, serão designados pelos empregados, sendo todos eleitos em (voto) secreto pelos empregados, independentemente de filiação sindical.",
-    alternativaC: "Os representantes dos empregados, titulares e suplentes, serão designados pelos empregados e empregadores, sendo todos eleitos em (voto) secreto pelos empregados e empregadores, independentemente de filiação sindical.",
-    alternativaD: "Os representantes dos empregados, titulares e suplentes, serão designados pelos empregados e empregadores, sendo o presidente designado pelo empregador e os demais eleitos em (voto) secreto, independentemente de filiação sindical.",
-    correta: "Os representantes dos empregados, titulares e suplentes, serão designados pelos empregados e empregadores, sendo o presidente designado pelo empregador e os demais eleitos em (voto) secreto, independentemente de filiação sindical.",
+    pergunta: "Com relação a riscos elétricos e as principais sugestões. Assinale a afirmativa correta.",
+    alternativaA: "Choque elétrico - não possuir implantes eletrônicos no corpo e / ou próteses metálicas, blindagens. Arco Elétrico - protetor facial e vestimenta. Campo Eletromagnéticos - desenergização, tensão de  segurança, barreiras, invólucros,  luvas, bota de segurança, capacete.",
+    alternativaB: "Choque elétrico - desenergização, tensão de  segurança, barreiras, invólucros,  luvas, bota de segurança, capacete. Arco Elétrico - protetor facial e vestimenta. Campo Eletromagnéticos - não possuir implantes eletrônicos no corpo e / ou próteses metálicas, blindagens.",
+    alternativaC: "Choque elétrico - desenergização, tensão de  segurança, barreiras, invólucros,  luvas, bota de segurança, capacete. Arco Elétrico - não possuir implantes eletrônicos no corpo e / ou próteses metálicas, blindagens. Campo Eletromagnéticos - rotetor facial e vestimenta.",
+    alternativaD: "Choque elétrico - protetor facial e vestimenta. Arco Elétrico - desenergização, tensão de  segurança, barreiras, invólucros,  luvas, bota de segurança, capacete. Campo Eletromagnéticos - não possuir implantes eletrônicos no corpo e / ou próteses metálicas, blindagens.",
+    correta: "Choque elétrico - desenergização, tensão de  segurança, barreiras, invólucros,  luvas, bota de segurança, capacete. Arco Elétrico - protetor facial e vestimenta. Campo Eletromagnéticos - não possuir implantes eletrônicos no corpo e / ou próteses metálicas, blindagens.",
 }
 const q9 = {
-    numQuestao: 9,
+    numQuestao: 9 + '.',
     imagem: '4.png', // ADICIONE
-    pergunta: "O que é uma doença profissional.",
-    alternativaA: "Doença produzida ou desencadeada pelo exercício do trabalho peculiar a determinada atividade e constante da respectiva relação elaborada pelo Ministério do Trabalho e da Previdência Social",
-    alternativaB: "Doença produzida ou desencadeada pelo exercício do trabalho peculiar a determinada atividade e sem a respectiva relação elaborada pelo Ministério do Trabalho e da Previdência Social",
-    alternativaC: "Doença adquirida ou desencadeada em função de condições  especiais em que o trabalho é realizado e com ele se relacione diretamente.",
-    alternativaD: "Doença adquirida ou desencadeada em função de condições  especiais em que o trabalho é realizado e com ele se relacione diretamente ou indiretamente.",
-    correta: "Doença produzida ou desencadeada pelo exercício do trabalho peculiar a determinada atividade e constante da respectiva relação elaborada pelo Ministério do Trabalho e da Previdência Social",
+    pergunta: "Conforme o item 10.7.8 da NR-10, que trata de equipamentos destinados ao trabalho de alta tensão, o equipamento que NÃO se enquadra na categoria de itens que precisam ser submetidos a testes elétricos ou ensaios de laboratório periódicos é:",
+    alternativaA: "luva de borracha.",
+    alternativaB: "protetor auricular.",
+    alternativaC: "capacete de segurança.",
+    alternativaD: "bastão de manobra.",
+    correta: "protetor auricular.",
 }
 const q10 = {
-    numQuestao: 10,
+    numQuestao: 10 + '.',
     imagem: '5.png', // ADICIONE
-    pergunta: "O que é uma Doença do trabalho.",
-    alternativaA: "Doença produzida ou desencadeada pelo exercício do trabalho peculiar a determinada atividade e constante da respectiva relação elaborada pelo Ministério do Trabalho e da Previdência Social",
-    alternativaB: "Doença produzida ou desencadeada pelo exercício do trabalho peculiar a determinada atividade e sem a respectiva relação elaborada pelo Ministério do Trabalho e da Previdência Social",
-    alternativaC: "Doença adquirida ou desencadeada em função de condições  especiais em que o trabalho é realizado e com ele se relacione diretamente.",
-    alternativaD: "Doença adquirida ou desencadeada em função de condições  especiais em que o trabalho é realizado e com ele se relacione diretamente ou indiretamente.",
-    correta: "Doença adquirida ou desencadeada em função de condições  especiais em que o trabalho é realizado e com ele se relacione diretamente.",
+    pergunta: "Assinale a opção correta em relação à segurança nas instalações elétricas, de acordo com a NR-10.",
+    alternativaA: "Se não houver procedimento específico da instituição ou especificações do fabricante em relação a testes e ensaios periódicos para os equipamentos utilizados em alta tensão, esses devem ser realizados anualmente.",
+    alternativaB: "Em obra de manutenção em subestação, as responsabilidades quanto ao cumprimento das normas são exclusivas do contratante do serviço de instalação elétrica.",
+    alternativaC: "Os serviços em instalações elétricas energizadas de alta tensão podem ser realizados por um único profissional, desde que seguidas as recomendações de segurança.",
+    alternativaD: "Entre as medidas de proteção coletiva inclui-se a completa desenergização elétrica, não sendo possível o emprego de tensão de segurança.",
+    correta: "Os serviços em instalações elétricas energizadas de alta tensão podem ser realizados por um único profissional, desde que seguidas as recomendações de segurança.",
 }
 
 // CONSTANTE COM UM ARRAY DE OBJETOS COM TODAS AS QUESTOES
