@@ -136,27 +136,6 @@
             event.preventDefault();
         }
 
-        // Função para lidar com o evento de toque finalizar
-        function handleTouchEnd(event) {
-            const touchEndX = event.changedTouches[0].clientX;
-            const touchEndY = event.changedTouches[0].clientY;
-            const touchDistanceX = touchEndX - touchStartX;
-            const touchDistanceY = touchEndY - touchStartY;
-            if (Math.abs(touchDistanceX) > Math.abs(touchDistanceY)) {
-                if (touchDistanceX > 0) {
-                    alert('Deslizou para a direita');
-                } else {
-                    alert('Deslizou para a esquerda');
-                }
-            } else {
-                if (touchDistanceY > 0) {
-                    alert('Deslizou para baixo');
-                } else {
-                    alert('Deslizou para cima');
-                }
-            }
-        }
-
         // Adiciona os ouvintes de eventos de arrastar e soltar para cada item da lista
         const boxes = document.querySelectorAll('.box');
         boxes.forEach(function(box) {
