@@ -36,7 +36,12 @@
 
         function speak(id, what) {
             var element = document.getElementById(id);
-            element.innerHTML = 'Clicked ' + what;
+            element.innerHTML = 'Clicked' + what;
+        }
+
+        function speak(id, what) {
+            var element = document.getElementById(id);
+            element.innerHTML = 'Touch' + what;
         }
 
         function saveOrder(item) {
@@ -489,41 +494,35 @@
         });
     </script>
 
+
     <script>
         const ul = document.querySelector('#boxes');
         const boxes = ul.querySelectorAll('.box');
         const boxesArray = Array.from(boxes);
         boxesArray.sort(() => Math.random() - 0.5);
         ul.innerHTML = '';
-        boxesArray.forEach(box => ul.appendChild(box)); <
-        /sc    ript>
+        boxesArray.forEach(box => ul.appendChild(box));
+    </script>
 
-        <
-        scr ipt >
-            function checkOrder() {
-                var boxes = document.querySelectorAll('.box');
-                var isCorrectOrder = true;
-                for (var i = 0; i < boxes.length; i++) {
-                    if (boxes[i].id !== String(i + 1)) {
-                        isCorrectOrder = false;
-                        break;
-                    }
-                }
-                if (isCorrectOrder) {
-                    alert('Parabéns, você ordenou corretamente as atividades!');
-                } else {
-                    alert('A ordem está incorreta, tente novamente as atividades.');
+    <script>
+        function checkOrder() {
+            var boxes = document.querySelectorAll('.box');
+            var isCorrectOrder = true;
+            for (var i = 0; i < boxes.length; i++) {
+                if (boxes[i].id !== String(i + 1)) {
+                    isCorrectOrder = false;
+                    break;
                 }
             }
+            if (isCorrectOrder) {
+                alert('Parabéns, você ordenou corretamente as atividades!');
+            } else {
+                alert('A ordem está incorreta, tente novamente as atividades.');
+            }
+        }
     </script>
 
 
 </body>
 
-</html> isCorrectOrder = false; break; } } if (isCorrectOrder) { alert('Parabéns, você ordenou corretamente as atividades!'); } else { alert('A ordem está incorreta, tente novamente as atividades.'); } }
-</script>
-
-
-</body>
-
-</html> break; } } if (isCorrectOrder) { alert('Parabéns, você ordenou corretamente as atividades!'); } else { alert('A ordem está incorreta, tente novamente as atividades.'); } y
+</html>

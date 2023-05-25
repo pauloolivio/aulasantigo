@@ -69,10 +69,14 @@ _ToolManDragGroup.prototype = {
 
         handle.toolManDragGroup = this
         events.register(handle, 'mousedown', this._dragInit)
+        events.register(handle, 'touchdown', this._dragInit)
         handle.onmousedown = function() { return false }
 
         if (this.element != handle)
             events.unregister(this.element, 'mousedown', this._dragInit)
+
+        if (this.element != handle)
+            events.unregister(this.element, 'touchdown', this._dragInit)
     },
 
     register: function(type, func) {
@@ -132,8 +136,10 @@ _ToolManDragGroup.prototype = {
         group._initialMouseOffset = dragEvent.mouseOffset
         group._grabOffset = dragEvent.mouseOffset.minus(dragEvent.topLeftOffset)
         ToolMan.events().register(document, 'mousemove', group._drag)
+        ToolMan.events().register(document, 'touchmove', group._drag)
         document.onmousemove = function() { return false }
         ToolMan.events().register(document, 'mouseup', group._dragEnd)
+        ToolMan.events().register(document, 'touchup', group._dragEnd)
 
         group._notifyListeners(dragEvent)
     },
