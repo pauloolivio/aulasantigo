@@ -51,25 +51,41 @@
             </div>
         </div>
     </section>
+    </main>
 
     <section class="container">
         <ul id="boxes">
-            <li class="box bg-warning" id="1" draggable="true">1 Potência útil nas árvores (I)</li>
-            <li class="box bg-info" id="2" draggable="true">2 dsa</li>
-            <li class="box bg-warning" id="3" draggable="true">3 Potência útil nas árvores (II)</li>
-            <li class="box bg-info" id="4" draggable="true">4 Equação</li>
-            <li class="box bg-warning" id="5" draggable="true">5 Rotação dos eixos-árvores (I)</li>
-            <li class="box bg-info" id="6" draggable="true">6 Equação</li>
-            <li class="box bg-warning" id="7" draggable="true">Rotação dos eixos-árvores (II)</li>
-            <li class="box bg-info" id="8" draggable="true">Equação</li>
-            <li class="box bg-warning" id="9" draggable="true">Rotação dos eixos-árvores (III)</li>
-            <li class="box bg-info" id="10" draggable="true">Equação</li>
+            <li class="box bg-warning" id="1" draggable="true" ontouchstart="handleTouchStart(event)" ontouchmove="handleTouchMove(event)" ontouchend="handleTouchEnd(event)">1 Potência útil nas árvores (I)</li>
+            <li class="box bg-info" id="2" draggable="true" ontouchstart="handleTouchStart(event)" ontouchmove="handleTouchMove(event)" ontouchend="handleTouchEnd(event)">2 dsa</li>
+            <li class="box bg-warning" id="3" draggable="true" ontouchstart="handleTouchStart(event)" ontouchmove="handleTouchMove(event)" ontouchend="handleTouchEnd(event)">3 Potência útil nas árvores (II)</li>
+            <li class="box bg-info" id="4" draggable="true" ontouchstart="handleTouchStart(event)" ontouchmove="handleTouchMove(event)" ontouchend="handleTouchEnd(event)">4 Equação</li>
+            <li class="box bg-warning" id="5" draggable="true" ontouchstart="handleTouchStart(event)" ontouchmove="handleTouchMove(event)" ontouchend="handleTouchEnd(event)">5 Rotação dos eixos-árvores (I)</li>
+            <li class="box bg-info" id="6" draggable="true" ontouchstart="handleTouchStart(event)" ontouchmove="handleTouchMove(event)" ontouchend="handleTouchEnd(event)">6 Equação</li>
+            <li class="box bg-warning" id="7" draggable="true" ontouchstart="handleTouchStart(event)" ontouchmove="handleTouchMove(event)" ontouchend="handleTouchEnd(event)">7 Rotação dos eixos-árvores (II)</li>
+            <li class="box bg-info" id="8" draggable="true" ontouchstart="handleTouchStart(event)" ontouchmove="handleTouchMove(event)" ontouchend="handleTouchEnd(event)">8 Equação</li>
+            <li class="box bg-warning" id="9" draggable="true" ontouchstart="handleTouchStart(event)" ontouchmove="handleTouchMove(event)" ontouchend="handleTouchEnd(event)">9 Rotação dos eixos-árvores (III)</li>
+            <li class="box bg-info" id="10" draggable="true" ontouchstart="handleTouchStart(event)" ontouchmove="handleTouchMove(event)" ontouchend="handleTouchEnd(event)">10 Equação</li>
         </ul>
     </section>
 
+    <br>
+    <div class="container d-flex justify-content-center flex-wrap">
+        <button class="Button1 fs-5 bg-danger" onclick="checkOrder()"><strong>VERIFICAR ORDEM</strong></button>
+        <button class="Button2 fs-5 bg-secondary" onClick="window.location.reload();"><strong>REINICIAR JOGO</strong></button>
+    </div>
+
+    <hr>
+    <footer>
+        <div class="container text-center bg-secondary text-light rounded p-3 mb-2">
+            <h2 class="direitos-texto">Dr. Eng. Paulo Sergio Olivio Filho</h2>
+            <p class="direitos-texto">©2023 - Todos os Direitos Reservados</p>
+        </div>
+    </footer>
 
     <script>
         let dragSrcElement = null;
+        let touchStartX = 0;
+        let touchStartY = 0;
 
         // Função para lidar com o evento de arrastar um item
         function handleDragStart(event) {
@@ -109,6 +125,38 @@
             });
         }
 
+        // Função para lidar com o evento de toque começar
+        function handleTouchStart(event) {
+            touchStartX = event.touches[0].clientX;
+            touchStartY = event.touches[0].clientY;
+        }
+
+        // Função para lidar com o evento de toque mover
+        function handleTouchMove(event) {
+            event.preventDefault();
+        }
+
+        // Função para lidar com o evento de toque finalizar
+        function handleTouchEnd(event) {
+            const touchEndX = event.changedTouches[0].clientX;
+            const touchEndY = event.changedTouches[0].clientY;
+            const touchDistanceX = touchEndX - touchStartX;
+            const touchDistanceY = touchEndY - touchStartY;
+            if (Math.abs(touchDistanceX) > Math.abs(touchDistanceY)) {
+                if (touchDistanceX > 0) {
+                    alert('Deslizou para a direita');
+                } else {
+                    alert('Deslizou para a esquerda');
+                }
+            } else {
+                if (touchDistanceY > 0) {
+                    alert('Deslizou para baixo');
+                } else {
+                    alert('Deslizou para cima');
+                }
+            }
+        }
+
         // Adiciona os ouvintes de eventos de arrastar e soltar para cada item da lista
         const boxes = document.querySelectorAll('.box');
         boxes.forEach(function(box) {
@@ -117,29 +165,6 @@
             box.addEventListener('drop', handleDrop, false);
             box.addEventListener('dragend', handleDragEnd, false);
         });
-    </script>
-
-    <br>
-    <div class="container d-flex justify-content-center flex-wrap ">
-        <button class="Button1 fs-5 bg-danger " onclick="checkOrder() "><strong>VERIFICAR ORDEM</strong></button>
-        <button class="Button2 fs-5 bg-secondary " onClick="window.location.reload(); "><strong>REINICIAR JOGO</strong></button>
-    </div>
-
-    <hr>
-    <footer>
-        <div class="container text-center bg-secondary text-light rounded p-3 mb-2 ">
-            <h2 class="direitos-texto ">Dr. Eng. Paulo Sergio Olivio Filho</h1>
-                <p class="direitos-texto ">©2023 - Todos os Direitos Reservados</p>
-        </div>
-    </footer>
-
-    <script>
-        const ul = document.querySelector('#boxes');
-        const boxes = ul.querySelectorAll('.box');
-        const boxesArray = Array.from(boxes);
-        boxesArray.sort(() => Math.random() - 0.5);
-        ul.innerHTML = '';
-        boxesArray.forEach(box => ul.appendChild(box));
     </script>
 
     <script>
@@ -160,14 +185,6 @@
         }
     </script>
 
-
 </body>
-
-</html>cript>
-
-
-</body>
-
-</html>
 
 </html>
