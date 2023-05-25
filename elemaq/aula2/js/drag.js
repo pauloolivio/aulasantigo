@@ -69,14 +69,10 @@ _ToolManDragGroup.prototype = {
 
         handle.toolManDragGroup = this
         events.register(handle, 'mousedown', this._dragInit)
-        events.register(handle, 'touchstart', this._dragInit);
         handle.onmousedown = function() { return false }
 
-
-        if (this.element !== handle) {
-            events.unregister(this.element, 'mousedown', this._dragInit);
-            events.unregister(this.element, 'touchstart', this._dragInit);
-        }
+        if (this.element != handle)
+            events.unregister(this.element, 'mousedown', this._dragInit)
     },
 
     register: function(type, func) {
