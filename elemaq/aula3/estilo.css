@@ -1,0 +1,34 @@
+body {
+    background-color: lightcyan;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container4 {
+    background-color: #333;
+    padding: 60px 20px 30px 20px;
+    padding-top: 10px;
+    width: 70vw;
+    margin: 10px auto;
+    border: 3px solid black;
+}
+
+.draggable4 {
+    background-color: white;
+    border: 3px solid black;
+    padding: 15px;
+    margin-top: 15px;
+    cursor: move;
+}
+
+.draggable4.dragging {
+    opacity: 0.5;
+}
+
+.no-scroll {
+    height: 100vh;
+    overflow: hidden;
+}
