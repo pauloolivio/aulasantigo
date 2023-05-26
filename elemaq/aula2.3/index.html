@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilo.css">
+    <script src="script.js"></script>
+
+</head>
+
+<body>
+    <main class="container text-center">
+        <section class='conteudos'>
+            <div class="text-center p-3">
+                <h1 class="header__headline ">Aula 02 - Transmissão, Potência e Rendimento</h1>
+                <h5 class="fw-semibold">Disciplina - Elementos de Máquina</h1>
+                    <p class="fw-semibold ">Professor Dr. Eng. Paulo Sergio Olivio Filho</p>
+            </div>
+
+            <div class="text-center bg-secondary text-light rounded mb-2 p-3 fs-5">
+                <article class='centro' id='instrucoes'>
+                    Arrastes as caixas de textos e coloque na sequência correta de cima para baixo.
+                </article>
+            </div>
+    </main>
+    <section>
+        <div class="container text-center">
+            <h4><strong>COLOQUE AS FORMULAS DO EXERCÍCIO ABAIXO NA ORDEM CORRETA</strong></h4>
+        </div>
+        <br>
+        <div class="container">
+            <p class="fs-5">
+                <strong>Sobre potência útil e dissipada do sistema</strong> - A transmissão por engrenagens, representada na figura, é acionada por um motor elétrico com potência P = 18,5 [kW] e rotação n = 1170 [rpm]. As engrenagens possuem os seguintes
+                números de dentes: Z1=25; Z2=65; Z3=35; Z4=64.
+            </p>
+            <br>
+            <div class="fs-5">
+                <div style="float: left;">
+                    <p> Os rendimentos são:</p>
+                    <p>n<sub>e</sub>=0,98 (Transmissão/par de engrenagens);</p>
+                    <p>n<sub>m</sub>=0,99 (Par de mancais rolamentos).</p>
+                </div>
+                <div style="float: right;">
+                    <img class="img-fluid" src="img/im2.png" style="max-width: 500px" alt="">
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="container4 text-center">
+            <div class="draggable4 bg-info" draggable="false" id="1">Potência útil na árvore (I)</div>
+            <div class="draggable4 bg-warning" draggable="false" id="2">
+                <math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math">
+                    <mml:msub>
+                        <mml:mrow>
+                            <mml:mi>P</mml:mi>
+                        </mml:mrow>
+                        <mml:mrow>
+                            <mml:mi>m</mml:mi>
+                            <mml:mi>o</mml:mi>
+                            <mml:mi>t</mml:mi>
+                            <mml:mi>o</mml:mi>
+                            <mml:mi>r</mml:mi>
+                        </mml:mrow>
+                    </mml:msub>
+                    <mml:mi>*</mml:mi>
+                    <mml:msub>
+                        <mml:mrow>
+                            <mml:mi>n</mml:mi>
+                        </mml:mrow>
+                        <mml:mrow>
+                            <mml:mi>m</mml:mi>
+                        </mml:mrow>
+                    </mml:msub>
+                    <mml:mi> </mml:mi>
+                    <mml:mi> </mml:mi>
+                    <mml:mi> </mml:mi>
+                    <mml:mo>[</mml:mo>
+                    <mml:mi>W</mml:mi>
+                    <mml:mo>]</mml:mo>
+                </math>
+            </div>
+            <div class="draggable4 bg-info" draggable="false" id="3">Potência útil na árvore (II)</div>
+            <div class="draggable4 bg-warning" draggable="false" id="4">
+                <math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math">
+                    <mml:msub>
+                        <mml:mrow>
+                            <mml:mi>P</mml:mi>
+                        </mml:mrow>
+                        <mml:mrow>
+                            <mml:mi>m</mml:mi>
+                            <mml:mi>o</mml:mi>
+                            <mml:mi>t</mml:mi>
+                            <mml:mi>o</mml:mi>
+                            <mml:mi>r</mml:mi>
+                        </mml:mrow>
+                    </mml:msub>
+                    <mml:mi>*</mml:mi>
+                    <mml:msub>
+                        <mml:mrow>
+                            <mml:mi>n</mml:mi>
+                        </mml:mrow>
+                        <mml:mrow>
+                            <mml:mi>e</mml:mi>
+                        </mml:mrow>
+                    </mml:msub>
+                    <mml:mi>*</mml:mi>
+                    <mml:msubsup>
+                        <mml:mrow>
+                            <mml:mi>n</mml:mi>
+                        </mml:mrow>
+                        <mml:mrow>
+                            <mml:mi>m</mml:mi>
+                        </mml:mrow>
+                        <mml:mrow>
+                            <mml:mn>2</mml:mn>
+                        </mml:mrow>
+                    </mml:msubsup>
+                    <mml:mi> </mml:mi>
+                    <mml:mi> </mml:mi>
+                    <mml:mi> </mml:mi>
+                    <mml:mo>[</mml:mo>
+                    <mml:mi>W</mml:mi>
+                    <mml:mo>]</mml:mo>
+                </math>
+                <div class="draggable4 bg-info" draggable="false" id="5">Potência útil na árvore (III)</div>
+                <div class="draggable4 bg-warning" draggable="false" id="6">
+                    <math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math">
+                        <mml:msub>
+                            <mml:mrow>
+                                <mml:mi>P</mml:mi>
+                            </mml:mrow>
+                            <mml:mrow>
+                                <mml:mi>m</mml:mi>
+                                <mml:mi>o</mml:mi>
+                                <mml:mi>t</mml:mi>
+                                <mml:mi>o</mml:mi>
+                                <mml:mi>r</mml:mi>
+                            </mml:mrow>
+                        </mml:msub>
+                        <mml:mi>*</mml:mi>
+                        <mml:msubsup>
+                            <mml:mrow>
+                                <mml:mi>n</mml:mi>
+                            </mml:mrow>
+                            <mml:mrow>
+                                <mml:mi>e</mml:mi>
+                            </mml:mrow>
+                            <mml:mrow>
+                                <mml:mn>2</mml:mn>
+                            </mml:mrow>
+                        </mml:msubsup>
+                        <mml:msubsup>
+                            <mml:mrow>
+                                <mml:mi>*</mml:mi>
+                                <mml:mi>n</mml:mi>
+                            </mml:mrow>
+                            <mml:mrow>
+                                <mml:mi>m</mml:mi>
+                                <mml:mi> </mml:mi>
+                                <mml:mi> </mml:mi>
+                                <mml:mi> </mml:mi>
+                            </mml:mrow>
+                            <mml:mrow>
+                                <mml:mn>3</mml:mn>
+                            </mml:mrow>
+                        </mml:msubsup>
+                        <mml:mo>[</mml:mo>
+                        <mml:mi>W</mml:mi>
+                        <mml:mo>]</mml:mo>
+                    </math>
+                    <div class="draggable4 bg-info" draggable="false" id="7">Potência dissipada na árvore (I)</div>
+                    <div class="draggable4 bg-warning" draggable="false" id="8">
+                        <math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math">
+                            <mml:msub>
+                                <mml:mrow>
+                                    <mml:mi>P</mml:mi>
+                                </mml:mrow>
+                                <mml:mrow>
+                                    <mml:mi>m</mml:mi>
+                                    <mml:mi>o</mml:mi>
+                                    <mml:mi>t</mml:mi>
+                                    <mml:mi>o</mml:mi>
+                                    <mml:mi>r</mml:mi>
+                                </mml:mrow>
+                            </mml:msub>
+                            <mml:mi> </mml:mi>
+                            <mml:mo>-</mml:mo>
+                            <mml:mi> </mml:mi>
+                            <mml:msub>
+                                <mml:mrow>
+                                    <mml:mo>(</mml:mo>
+                                    <mml:mi>P</mml:mi>
+                                </mml:mrow>
+                                <mml:mrow>
+                                    <mml:mi>m</mml:mi>
+                                    <mml:mi>o</mml:mi>
+                                    <mml:mi>t</mml:mi>
+                                    <mml:mi>o</mml:mi>
+                                    <mml:mi>r</mml:mi>
+                                </mml:mrow>
+                            </mml:msub>
+                            <mml:mi>*</mml:mi>
+                            <mml:msub>
+                                <mml:mrow>
+                                    <mml:mi>n</mml:mi>
+                                </mml:mrow>
+                                <mml:mrow>
+                                    <mml:mi>m</mml:mi>
+                                </mml:mrow>
+                            </mml:msub>
+                            <mml:mo>)</mml:mo>
+                            <mml:mi> </mml:mi>
+                            <mml:mi> </mml:mi>
+                            <mml:mi> </mml:mi>
+                            <mml:mo>[</mml:mo>
+                            <mml:mi>W</mml:mi>
+                            <mml:mo>]</mml:mo>
+                        </math>
+                    </div>
+                    <div class="draggable4 bg-info" draggable="false" id="9">Potência dissipada na árvore (II)</div>
+                    <div class="draggable4 bg-warning" draggable="false" id="10">
+                        <math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math">
+                            <mml:msub>
+                                <mml:mrow>
+                                    <mml:mi>P</mml:mi>
+                                </mml:mrow>
+                                <mml:mrow>
+                                    <mml:mi>m</mml:mi>
+                                    <mml:mi>o</mml:mi>
+                                    <mml:mi>t</mml:mi>
+                                    <mml:mi>o</mml:mi>
+                                    <mml:mi>r</mml:mi>
+                                </mml:mrow>
+                            </mml:msub>
+                            <mml:mi> </mml:mi>
+                            <mml:mo>-</mml:mo>
+                            <mml:mi> </mml:mi>
+                            <mml:mo>(</mml:mo>
+                            <mml:msub>
+                                <mml:mrow>
+                                    <mml:mi>P</mml:mi>
+                                </mml:mrow>
+                                <mml:mrow>
+                                    <mml:mi>m</mml:mi>
+                                    <mml:mi>o</mml:mi>
+                                    <mml:mi>t</mml:mi>
+                                    <mml:mi>o</mml:mi>
+                                    <mml:mi>r</mml:mi>
+                                </mml:mrow>
+                            </mml:msub>
+                            <mml:mi>*</mml:mi>
+                            <mml:msub>
+                                <mml:mrow>
+                                    <mml:mi>n</mml:mi>
+                                </mml:mrow>
+                                <mml:mrow>
+                                    <mml:mi>e</mml:mi>
+                                </mml:mrow>
+                            </mml:msub>
+                            <mml:mi>*</mml:mi>
+                            <mml:msubsup>
+                                <mml:mrow>
+                                    <mml:mi>n</mml:mi>
+                                </mml:mrow>
+                                <mml:mrow>
+                                    <mml:mi>m</mml:mi>
+                                </mml:mrow>
+                                <mml:mrow>
+                                    <mml:mn>2</mml:mn>
+                                </mml:mrow>
+                            </mml:msubsup>
+                            <mml:mo>)</mml:mo>
+                            <mml:mi> </mml:mi>
+                            <mml:mi> </mml:mi>
+                            <mml:mi> </mml:mi>
+                            <mml:mo>[</mml:mo>
+                            <mml:mi>W</mml:mi>
+                            <mml:mo>]</mml:mo>
+                        </math>
+                    </div>
+
+                    <div class="draggable4 bg-info" draggable="false" id="11">Potência dissipada na árvore (III)</div>
+                    <div class="draggable4 bg-warning" draggable="false" id="12">
+                        <math xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math">
+                            <mml:msub>
+                                <mml:mrow>
+                                    <mml:mi>P</mml:mi>
+                                </mml:mrow>
+                                <mml:mrow>
+                                    <mml:mi>m</mml:mi>
+                                    <mml:mi>o</mml:mi>
+                                    <mml:mi>t</mml:mi>
+                                    <mml:mi>o</mml:mi>
+                                    <mml:mi>r</mml:mi>
+                                </mml:mrow>
+                            </mml:msub>
+                            <mml:mi> </mml:mi>
+                            <mml:mo>-</mml:mo>
+                            <mml:mi> </mml:mi>
+                            <mml:mo>(</mml:mo>
+                            <mml:msub>
+                                <mml:mrow>
+                                    <mml:mi>P</mml:mi>
+                                </mml:mrow>
+                                <mml:mrow>
+                                    <mml:mi>m</mml:mi>
+                                    <mml:mi>o</mml:mi>
+                                    <mml:mi>t</mml:mi>
+                                    <mml:mi>o</mml:mi>
+                                    <mml:mi>r</mml:mi>
+                                </mml:mrow>
+                            </mml:msub>
+                            <mml:mi>*</mml:mi>
+                            <mml:msubsup>
+                                <mml:mrow>
+                                    <mml:mi>n</mml:mi>
+                                </mml:mrow>
+                                <mml:mrow>
+                                    <mml:mi>e</mml:mi>
+                                </mml:mrow>
+                                <mml:mrow>
+                                    <mml:mn>2</mml:mn>
+                                </mml:mrow>
+                            </mml:msubsup>
+                            <mml:msubsup>
+                                <mml:mrow>
+                                    <mml:mi>*</mml:mi>
+                                    <mml:mi>n</mml:mi>
+                                </mml:mrow>
+                                <mml:mrow>
+                                    <mml:mi>m</mml:mi>
+                                    <mml:mi> </mml:mi>
+                                </mml:mrow>
+                                <mml:mrow>
+                                    <mml:mn>3</mml:mn>
+                                </mml:mrow>
+                            </mml:msubsup>
+                            <mml:mo>)</mml:mo>
+                            <mml:mi> </mml:mi>
+                            <mml:mi> </mml:mi>
+                            <mml:mi> </mml:mi>
+                            <mml:mo>[</mml:mo>
+                            <mml:mi>W</mml:mi>
+                            <mml:mo>]</mml:mo>
+                        </math>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <div class="container d-flex justify-content-center flex-wrap">
+            <button class="Button1 fs-5 bg-danger" onclick="checkOrder()"><strong>VERIFICAR ORDEM</strong></button>
+            <button class="Button2 fs-5 bg-secondary" onClick="window.location.reload();"><strong>REINICIAR JOGO</strong></button>
+        </div>
+
+        <hr>
+        <footer>
+            <div class="container text-center bg-secondary text-light rounded p-3 mb-2">
+                <h2 class="direitos-texto">Dr. Eng. Paulo Sergio Olivio Filho</h2>
+                <p class="direitos-texto">©2023 - Todos os Direitos Reservados</p>
+            </div>
+        </footer>
+
+</body>
+
+<script>
+    const ul = document.querySelector('.container4');
+    const boxes = ul.querySelectorAll('.draggable4');
+    const boxesArray = Array.from(boxes);
+    boxesArray.sort(() => Math.random() - 0.5);
+    ul.innerHTML = '';
+    boxesArray.forEach(box => ul.appendChild(box));
+</script>
+
+<script>
+    function checkOrder() {
+        var boxes = document.querySelectorAll('.draggable4');
+        var isCorrectOrder = true;
+        for (var i = 0; i < boxes.length; i++) {
+            if (boxes[i].id !== String(i + 1)) {
+                isCorrectOrder = false;
+                break;
+            }
+        }
+        if (isCorrectOrder) {
+            alert('Parabéns!. Você ordenou corretamente.');
+
+        } else {
+            alert('OPS! A ordem está incorreta, tente novamente.');
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="#">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="#"></script>
+    <title>Calculadora de Transmissão</title>
+    <style>
+        .Button2 {
+            width: 100%;
+            height: 40px;
+            color: white;
+            border: 2px solid #000;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="container text-center">
+        <section class='conteudos'>
+            <div class="text-center p-3">
+                <h1 class="header__headline ">Aula 02 - Transmissão, Potência e Rendimento</h1>
+                <h5 class="fw-semibold">Disciplina - Elementos de Máquina</h1>
+                    <p class="fw-semibold ">Professor Dr. Eng. Paulo Sergio Olivio Filho</p>
+            </div>
+            <div class="text-center bg-secondary text-light rounded mb-2 p-3 fs-5">
+                <article class='centro' id='instrucoes'>
+                    Utilize a calculadora abaixo para obter o feed back da atividade.
+                </article>
+            </div>
+    </main>
+    <section>
+        <div class="container">
+            <h3 class="text-center">Calculadora de Transmissão</h3>
+            <br>
+            <form>
+                <label for="P">Potência (P - [W]):</label>
+                <input type="number" id="P" name="P" value="35000"><br>
+
+                <label for="n">Velocidade (n - [rpm]):</label>
+                <input type="number" id="n" name="n" value="2000"><br>
+
+                <label for="d1">Diâmetro 1 (d1 - [m]):</label>
+                <input type="number" id="d1" name="d1" value="0.120"><br>
+
+                <label for="d2">Diâmetro 2 (d2 - [m]):</label>
+                <input type="number" id="d2" name="d2" value="0.080"><br>
+
+                <label for="d3">Diâmetro 3 (d3 - [m]):</label>
+                <input type="number" id="d3" name="d3" value="0.090"><br>
+                <br>
+                <div class="container d-flex justify-content-center flex-wrap">
+                    <button class="Button2 fs-5 bg-secondary" type="button" onclick="calcular()">Calcular</button>
+                </div>
+            </form>
+            <br>
+            <h3>Resultado:</h3>
+            <textarea id="resultado" rows="8" cols="60" readonly></textarea>
+        </div>
+    </section>
+    <script>
+        function calcular() {
+            var P = parseFloat(document.getElementById("P").value);
+            var n = parseFloat(document.getElementById("n").value);
+            var d1 = parseFloat(document.getElementById("d1").value);
+            var d2 = parseFloat(document.getElementById("d2").value);
+            var d3 = parseFloat(document.getElementById("d3").value);
+
+            var resultado = TPR(P, n, d1, d2, d3);
+
+            document.getElementById("resultado").value =
+                "Dados de Transmissão:\n" +
+                "Velocidade Angular Polia 1 (w): " + resultado[0] + "\n" +
+                "Frequência Polia 1 (f): " + resultado[1] + "\n" +
+                "Período Polia 1 (T): " + resultado[2] + "\n" +
+                "Torque Polia 1 (Mt): " + resultado[3] + "\n" +
+                "Força Tangencial Polia 1 (Ft): " + resultado[4] + "\n" +
+                "Velocidade Periférica Polia 1 (vp): " + resultado[5] + "\n" +
+                "Relação de Transmissão Polia 1-2 (i): " + resultado[6];
+        }
+
+        function TPR(P, n, d1, d2, d3) {
+            var w = (n * Math.PI) / 30;
+            var f = w / (2 * Math.PI);
+            var T = (2 * Math.PI) / w;
+            var Mt = n * P;
+            var Ft = 2 * P / w * d1;
+            var vp = (w * d1) / 2;
+            var i = d1 > d2 ? d1 / d2 : d2 / d1;
+            return [w, f, T, Mt, Ft, vp, i];
+        }
+    </script>
+
+    <hr>
+    <footer>
+        <div class="container text-center bg-secondary text-light rounded p-3 mb-2">
+            <h2 class="direitos-texto">Dr. Eng. Paulo Sergio Olivio Filho</h2>
+            <p class="direitos-texto">©2023 - Todos os Direitos Reservados</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+.container4 {
+    margin: auto;
+}
+
+.draggable4 {
+    background-color: white;
+    border: 3px solid black;
+    padding: 15px;
+    margin-top: 15px;
+    cursor: move;
+}
+
+.draggable4.dragging {
+    opacity: 0.5;
+}
+
+.no-scroll {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.Button2 {
+    width: 100%;
+    height: 40px;
+    color: white;
+    border: 2px solid #000;
+    margin-top: 20px;
+}
+
+.Button1 {
+    border: 2px solid #000;
+    width: 100%;
+    height: 40px;
+    color: white;
+    margin-top: 20px;
+}
