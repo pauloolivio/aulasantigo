@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../img/gear-elemaq.png" />
+    <title>Jogo da Memoria</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body class="container">
+    <div class="text-center p-3">
+        <h1 class="header__headline ">Aula 01 - Introdução a Elementos de Transmissão Mecânica</h1>
+        <h5 class="fw-semibold">Disciplina - Elementos de Máquina</h1>
+            <p class="fw-semibold ">Professor Dr. Eng. Paulo Sergio Olivio Filho</p>
+    </div>
+    <header class="container bg-secondary">
+        <span class="player">Jogo da Memória</span>
+        <span>Tempo: <span id="timer">00</span></span>
+    </header>
+    <main>
+        <section class="memory-game ">
+            <div class="memory-card " data-framework="Periodo ">
+                <img class="front-face " src="image/Periodo1.png" alt="Periodo " />
+                <img class="back-face " src="image/gear-elemaq.png " alt="Gear Elemaq " />
+            </div>
+            <div class="memory-card " data-framework="Periodo ">
+                <img class="front-face " src="image/Periodo2.png " alt="Periodo " />
+                <img class="back-face " src="image/gear-elemaq.png " alt="Gear Elemaq " />
+                <em>T</em>
+            </div>
+
+            <div class="memory-card " data-framework="Frequencia ">
+                <img class="front-face " src="image/frequencia1.png " alt="Frequencia " />
+                <img class="back-face " src="image/gear-elemaq.png " alt="Gear Elemaq " />
+            </div>
+            <div class="memory-card " data-framework="Frequencia ">
+                <img class="front-face " src="image/frequencia2.png " alt="Frequência " />
+                <img class="back-face " src="image/gear-elemaq.png " alt="Gear Elemaq " />
+            </div>
+
+            <div class="memory-card " data-framework="Rotacao ">
+                <img class="front-face " src="image/rotacao1.png " alt="Rotacao " />
+                <img class="back-face " src="image/gear-elemaq.png " alt="Gear Elemaq " />
+            </div>
+            <div class="memory-card " data-framework="Rotacao ">
+                <img class="front-face " src="image/rotacao2.png " alt="Rotacao " />
+                <img class="back-face " src="image/gear-elemaq.png " alt="Gear Elemaq " />
+            </div>
+
+            <div class="memory-card " data-framework="Velocidade periferica ">
+                <img class="front-face " src="image/velocidade_per1.png " alt="Velocidade periferica " />
+                <img class="back-face " src="image/gear-elemaq.png " alt="Gear Elemaq " />
+            </div>
+            <div class="memory-card " data-framework="Velocidade periferica ">
+                <img class="front-face " src="image/velocidade_per2.png " alt="Velocidade periferica " />
+                <img class="back-face " src="image/gear-elemaq.png " alt="Gear Elemaq " />
+            </div>
+
+            <div class="memory-card " data-framework="Torque ">
+                <img class="front-face " src="image/torque1.png " alt="Torque " />
+                <img class="back-face " src="image/gear-elemaq.png " alt="Gear Elemaq " />
+            </div>
+            <div class="memory-card " data-framework="Torque ">
+                <img class="front-face " src="image/torque2.png " alt="Torque " />
+                <img class="back-face " src="image/gear-elemaq.png " alt="Gear Elemaq " />
+            </div>
+
+            <div class="memory-card " data-framework="Potencia ">
+                <img class="front-face " src="image/potencia1.png " alt="Potencia " />
+                <img class="back-face " src="image/gear-elemaq.png " alt="Gear Elemaq " />
+            </div>
+            <div class="memory-card " data-framework="Potencia ">
+                <img class="front-face " src="image/potencia2.png " alt="Potencia " />
+                <img class="back-face " src="image/gear-elemaq.png " alt="Gear Elemaq " />
+            </div>
+            <div class="memory-card " data-framework="Relacao ">
+                <img class="front-face " src="image/relacao1.png " alt="Relacao " />
+                <img class="back-face " src="image/gear-elemaq.png " alt="Gear Elemaq " />
+            </div>
+            <div class="memory-card " data-framework="Relacao ">
+                <img class="front-face " src="image/relacao2.png " alt="Relacao " />
+                <img class="back-face " src="image/gear-elemaq.png " alt="Gear Elemaq " />
+            </div>
+
+            <div class="memory-card " data-framework="Forca Tangencial ">
+                <img class="front-face " src=" image/forcatang1.png " alt="Forca Tangencial " />
+                <img class="back-face " src=" image/gear-elemaq.png " alt="Gear Elemaq " />
+            </div>
+            <div class="memory-card " data-framework="Forca Tangencial ">
+                <img class="front-face " src="image/forcatang2.png " alt="Forca Tangencial " />
+                <img class="back-face " src="image/gear-elemaq.png " alt="Gear Elemaq " />
+            </div>
+        </section>
+    </main>
+    <script src="scripts.js "></script>
+    <script src="timer.js "></script>
+
+    <div class="container btn" id="Button1" align="left">
+        <button class="Button1" onClick="window.location.reload();"><strong>REINICIAR JOGO</strong></button>
+    </div>
+
+    <div class="container text-center bg-secondary text-light rounded p-3 mt-2 mb-2  ">
+        <h2 class="direitos-texto ">Dr. Eng. Paulo Sergio Olivio Filho</h1>
+            <p class="direitos-texto ">Copyright @2023 - Todos os Direitos Reservados</p>
+    </div>
+
+
+
+</body>
+
+</html>
