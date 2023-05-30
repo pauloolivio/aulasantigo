@@ -79,7 +79,7 @@ const q4 = {
 const q5 = {
     numQuestao: 5,
     imagem: '5.png', // ADICIONE
-    pergunta: "Qual a sequência correta de um sistema de instalação eletrica da geração a distribuição de energia. Assinale a afirmativa correnta.",
+    pergunta: "Qual a sequência correta de um sistema de instalação eletrica da geração a distribuição de energia. Assinale a afirmativa correta.",
     alternativaA: "Usina geradora, estação elevador de tensão, estação rebaixadora, subestação, grandes consumidores",
     alternativaB: "Usina geradora, estação elevador de tensão, subestação, estação rebaixadora, transformador, pequenos consumidores.",
     alternativaC: "Usina geradora, estação elevador de tensão, estação rebaixadora, transformador, subestação, pequenos consumidores.",
