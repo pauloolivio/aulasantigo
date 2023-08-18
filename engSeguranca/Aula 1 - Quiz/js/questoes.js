@@ -114,8 +114,8 @@ const q8 = {
     alternativaA: "A exposição a uma fonte geradora.",
     alternativaB: "A probabilidade de lesão ou morte.",
     alternativaC: "Uma situação que provoca danos ao meio ambiente.",
-    alternativaD: "Um conjunto de circunstâncias que aumenta os riscos no local de trabalho.",
-    correta: "A probabilidade de lesão ou morte.",
+    alternativaD: "É uma condição ou conjunto de circunstancias com potecial para causar dano.",
+    correta: "É uma condição ou conjunto de circunstancias com potecial para causar dano.",
 }
 const q9 = {
     numQuestao: 9,
